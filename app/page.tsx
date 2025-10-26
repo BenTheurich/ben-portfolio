@@ -260,7 +260,7 @@ export default function Page() {
                 <img src="/education/tum.jpg" alt="Technical University of Munich campus" className="h-full w-full object-cover" loading="lazy" />
               </div>
               <div className="p-5">
-                <h3 className="font-semibold">Technical University of Munich</h3>
+                <h3 className="font-semibold">TUM — Technical University of Munich</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">M.Sc. Informatics (in progress)</p>
               </div>
             </div>
@@ -278,22 +278,35 @@ export default function Page() {
         </div>
       </section>
 
-
+      {/* SKILLS */}
+      {/* <section id="skills" data-section aria-labelledby="skills-title">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 id="skills-title" className="text-3xl md:text-4xl font-bold tracking-tight">Skills</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <Skill title="Languages" items={["TypeScript/JavaScript", "Python", "Java", "SQL"]} />
+            <Skill title="Frameworks" items={["Next.js", "React", "NestJS", "Node.js"]} />
+            <Skill title="Data / ML" items={["NumPy", "Pandas", "scikit-learn", "PyTorch (basics)"]} />
+            <Skill title="DevOps / Cloud" items={["GitHub Actions", "CI/CD", "Docker", "Vercel"]} />
+            <Skill title="Mapping / Geo" items={["MapLibre", "MapTiler", "PostGIS"]} />
+            <Skill title="Tooling" items={["PDFKit", "BullMQ", "OpenAPI", "Postman/Insomnia"]} />
+          </div>
+        </div>
+      </section> */}
     </>
   );
 }
 
-function Skill({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="card p-5">
-      <h3 className="font-semibold">{title}</h3>
-      <ul className="mt-3 flex flex-wrap gap-2">
-        {items.map((i) => (
-          <li key={i} className="rounded-full bg-black/5 px-2.5 py-1 text-xs text-gray-700 dark:bg-white/10 dark:text-gray-200">
-            {i}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+// function Skill({ title, items }: { title: string; items: string[] }) {
+//   return (
+//     <div className="card p-5">
+//       <h3 className="font-semibold">{title}</h3>
+//       <ul className="mt-3 flex flex-wrap gap-2">
+//         {items.map((i) => (
+//           <li key={i} className="rounded-full bg-black/5 px-2.5 py-1 text-xs text-gray-700 dark:bg-white/10 dark:text-gray-200">
+//             {i}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
