@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "a11y": {
+    "skipLink": "Skip to content",
+    "primaryNav": "Primary",
+    "profileAlt": "Portrait of Ben Theurich",
+    "profileCaption": "Ben Theurich — portrait",
+    "languageToggle": "Switch language",
+    "techStack": "Tech stack"
+  },
+  "hero": {
+    "location": "Munich, Germany",
+    "title": "Hi, I'm",
+    "nameAccent": "Ben Theurich",
+    "subtitle": "Software Engineer & M.Sc. Informatics student at TUM.",
+    "description": "I build reliable, clean systems and explore practical ML / Computer Vision tooling.",
+    "downloadCV": "Download CV",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "viewProjects": "Projects"
+  },
+  "about": {
+    "title": "About",
+    "p1": "I'm a software engineer from California, now based in Munich. I spent over two years at SPA in San Diego, where I built production-ready tools for defense clients and eventually stepped into a program lead role. That experience taught me how to take ownership, navigate complexity, and get things across the finish line without waiting to be asked.",
+    "p2": "Now I'm pursuing a Master's in Informatics at TUM, focusing on computer vision and machine learning. I chose TUM for the challenge—the program is tough, well-regarded, and full of opportunities to stretch myself. Munich also has a strong tech and startup scene, which is exactly what I was looking for.",
+    "p3": "I've been coding since I was a kid. What drew me in was how easy it was to get started. I didn't need fancy hardware, just a laptop and the will to build something, and I've always loved that kind of creative freedom. These days, I still enjoy building side projects, especially tools that solve niche problems or help communities run more smoothly.",
+    "p4": "I'm currently open to part-time / working-student roles in Munich. Something in computer vision or ML would be ideal, but I'm also open to full-stack roles where I can work with smart people and ship real things. I do well in agile, fast-moving teams, and I'm comfortable either leading or supporting as needed. I like to ask questions, push back when necessary, and stay flexible as ideas evolve.",
+    "p5": "One thing I try to live by: don't oversell, just deliver great work and let that speak for itself.",
+    "p6": "I'm bilingual in English and German, and always happy to connect. Shoot me a message on LinkedIn! :)"
+  },
+  "projects": {
+    "title": "Projects",
+    "cards": {
+      "timeSeriesAnnotator": {
+        "title": "Time Series Annotator",
+        "desc": "Cross-platform Java desktop tool to visualize and annotate multivariate time-series (CSV/HDF5) for Tandem Diabetes Care; supports linked, resizable charts (line/step/scatter), zoom/pan, and import/export of annotations.",
+        "links": {
+          "github": "GitHub"
+        }
+      },
+      "securiKey": {
+        "title": "SecuriKey",
+        "desc": "Portable Java desktop password manager. Protects entries with a master password (hashed with SHA-256) and encrypts stored passwords; supports add/edit/delete/search via a simple GUI.",
+        "links": {
+          "github": "GitHub",
+          "demo": "Demo"
+        }
+      },
+      "stocker": {
+        "title": "Stocker",
+        "desc": "Stock predicting site using AWS Forecast, Python + Flask, with an HTML CSS JS frontend, winner of \"Most Complete Solution\" at LPL Financial's 2023 Hackathon.",
+        "links": {
+          "github": "GitHub",
+          "hackathon": "Hackathon"
+        }
+      },
+      "videoPlayer": {
+        "title": "Video Player",
+        "desc": "Lightweight Java desktop video player for The Office that catalogs episodes with descriptions, plays via VLCJ, and remembers your last-watched episode and timestamp; metadata was populated via a Selenium scraper.",
+        "links": {
+          "github": "GitHub",
+          "demo": "Demo"
+        }
+      },
+      "embeddedSnake": {
+        "title": "Embedded Snake Game",
+        "desc": "From-scratch Snake for STM32: joystick controls, 8×8 LED display, and lightweight sound, driven by a tight game loop and a linked-list snake.",
+        "links": {
+          "github": "GitHub",
+          "demo": "Demo"
+        }
+      }
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "hackathon": {
+      "title": "Hackathon Winner — Stocker",
+      "desc": "Won first place for a stock predicting site using AWS Forecast, Python + Flask, with an HTML CSS JS frontend.",
+      "links": {
+        "linkedin": "LinkedIn Post",
+        "github": "GitHub Repo"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "roles": {
+      "spaII": {
+        "title": "Software Engineer II",
+        "company": "Systems Planning and Analysis (SPA)",
+        "period": "Jul 2025 – Oct 2025",
+        "location": "San Diego, CA",
+        "bullets": [
+          "Led ongoing development of a Java-based analysis tool; prioritized user feedback and coordinated cross-team work to keep releases on track.",
+          "Streamlined user workflows by reducing manual steps ~30–50%, improving task throughput.",
+          "Established a structured internal release cadence with pre-release QA gates; automated build versioning and standardized sprint release notes for traceability."
+        ]
+      },
+      "spaI": {
+        "title": "Software Engineer I",
+        "company": "Systems Planning and Analysis (SPA)",
+        "period": "Jun 2023 – Jul 2025",
+        "location": "San Diego, CA",
+        "bullets": [
+          "Expanded an existing Java analysis tool with new capabilities, improving reliability and usability.",
+          "Delivered on-site, hands-on training to DoD users; captured and prioritized feedback to drive the enhancement backlog.",
+          "Shipped the first customer-ready release on schedule in an Agile environment with positive acceptance."
+        ]
+      },
+      "hmeContract": {
+        "title": "Contract Software Engineer",
+        "company": "HM Electronics (HME)",
+        "period": "Aug 2022 – Jun 2023",
+        "location": "Carlsbad, CA",
+        "bullets": [
+          "Coordinated with multiple teams to establish a CI pipeline between dev builds and automated testing using Jenkins and Azure.",
+          "Used Ansible to improve Raspberry Pi setup, increasing productivity by ~200%.",
+          "Revamped automation architecture to simplify selecting executor nodes."
+        ]
+      },
+      "hmeIntern": {
+        "title": "Software Engineering Intern",
+        "company": "HM Electronics (HME)",
+        "period": "Jun 2022 – Aug 2022",
+        "location": "Carlsbad, CA",
+        "bullets": [
+          "Developed a front-end interface for a simulator app using Python + Flask.",
+          "Streamlined install & deployment to Raspberry Pi devices via shell scripts and Linux services.",
+          "Identified and fixed issues in Python-based Selenium browser test automation."
+        ]
+      },
+      "techForGood": {
+        "title": "Software Engineering Intern",
+        "company": "Tech For Good",
+        "period": "Jun 2021 – Aug 2021",
+        "location": "Boston, MA",
+        "bullets": [
+          "Implemented donation collection and distribution features in Solidity on Ethereum.",
+          "Collaborated remotely with a team of 7 interns using GitHub, Zoom, and Notion."
+        ]
+      },
+      "desteam": {
+        "title": "Coding Instructor Intern",
+        "company": "Delaware Steam Academy",
+        "period": "Jun 2021 – Sep 2021",
+        "location": "Newark, DE",
+        "bullets": [
+          "Taught summer coding camps in JavaScript to middle school students.",
+          "Fostered interest in coding and encouraged continued exploration."
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "institutions": {
+      "tum": {
+        "name": "TUM — Technical University of Munich",
+        "degree": "M.Sc. Informatics (in progress)",
+        "imageAlt": "Technical University of Munich campus"
+      },
+      "csusm": {
+        "name": "CSUSM — California State University San Marcos",
+        "degree": "B.S. Software Engineering, GPA 3.9, 2023",
+        "imageAlt": "California State University San Marcos campus"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Ben Theurich — Built with Next.js + Tailwind."
+  }
+}

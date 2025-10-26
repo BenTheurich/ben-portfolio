@@ -1,0 +1,180 @@
+{
+    "nav": {
+        "home": "Start",
+        "about": "Über mich",
+        "projects": "Projekte",
+        "achievements": "Erfolge",
+        "experience": "Erfahrung",
+        "education": "Ausbildung"
+    },
+    "a11y": {
+        "skipLink": "Zum Inhalt springen",
+        "primaryNav": "Hauptnavigation",
+        "profileAlt": "Porträt von Ben Theurich",
+        "profileCaption": "Ben Theurich — Porträt",
+        "languageToggle": "Sprache wechseln",
+        "techStack": "Tech-Stack"
+    },
+    "hero": {
+        "location": "München, Deutschland",
+        "title": "Hi, ich bin",
+        "nameAccent": "Ben Theurich",
+        "subtitle": "Software Engineer & M.Sc.-Student der Informatik an der TUM.",
+        "description": "Ich entwickle zuverlässige, saubere Systeme und arbeite an praxisnahen ML-/Computer-Vision-Tools.",
+        "downloadCV": "Lebenslauf herunterladen",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "viewProjects": "Projekte"
+    },
+    "about": {
+        "title": "Über mich",
+        "p1": "Ich bin ein Software Engineer aus Kalifornien, jetzt in München ansässig. Über zwei Jahre war ich bei SPA in San Diego tätig, wo ich produktionsreife Tools für Verteidigungskunden entwickelt und schließlich eine Programmleitungsrolle übernommen habe. Diese Erfahrung lehrte mich, Verantwortung zu übernehmen, Komplexität zu bewältigen und Projekte proaktiv zum Abschluss zu bringen.",
+        "p2": "Derzeit absolviere ich meinen Master in Informatik an der TUM mit Schwerpunkt auf Computer Vision und maschinellem Lernen. Ich habe mich für die TUM entschieden, weil das Programm anspruchsvoll und renommiert ist und viele Möglichkeiten zur Weiterentwicklung bietet. München hat zudem eine starke Tech- und Startup-Szene – genau das, wonach ich gesucht habe.",
+        "p3": "Ich programmiere seit meiner Kindheit. Was mich daran faszinierte, war die niedrige Einstiegshürde: keine teure Hardware, nur ein Laptop und der Wille, etwas zu bauen – diese kreative Freiheit begeistert mich bis heute. Heute entwickle ich gerne Nebenprojekte, besonders Tools, die spezifische Probleme lösen oder Communities reibungsloser laufen lassen.",
+        "p4": "Aktuell suche ich nach einer Werkstudent:in-Rolle in München. Idealerweise im Bereich Computer Vision oder ML, aber ich bin auch offen für Full-Stack-Positionen, bei denen ich mit kompetenten Kolleg:innen zusammenarbeite und echte Produkte ausliefere. Ich arbeite gut in agilen, schnelllebigen Teams und fühle mich in führenden wie unterstützenden Rollen wohl. Ich stelle gerne Fragen, widerspreche konstruktiv, wenn nötig, und bleibe flexibel, wenn sich Ideen weiterentwickeln.",
+        "p5": "Ein Prinzip, nach dem ich lebe: nicht überverkaufen – gute Arbeit für sich sprechen lassen.",
+        "p6": "Ich bin zweisprachig in Englisch und Deutsch und freue mich über Kontakte. Schreib mir gern auf LinkedIn! :)"
+    },
+    "projects": {
+        "title": "Projekte",
+        "cards": {
+            "timeSeriesAnnotator": {
+                "title": "Zeitreihen-Annotator",
+                "desc": "Plattformübergreifendes Java-Desktop-Tool zur Visualisierung und Annotation multivariater Zeitreihen (CSV/HDF5) für Tandem Diabetes Care; unterstützt verknüpfte, größenverstellbare Diagramme (Linien-, Stufen- und Punktdiagramme), Zoom/Pan sowie Import/Export von Annotationen.",
+                "links": {
+                    "github": "GitHub"
+                }
+            },
+            "securiKey": {
+                "title": "SecuriKey",
+                "desc": "Portabler Java-Desktop-Passwortmanager. Schützt Einträge mit einem Master-Passwort (SHA-256-Hash) und verschlüsselt gespeicherte Passwörter; unterstützt Hinzufügen/Bearbeiten/Löschen/Suchen über eine einfache GUI.",
+                "links": {
+                    "github": "GitHub",
+                    "demo": "Demo"
+                }
+            },
+            "stocker": {
+                "title": "Stocker",
+                "desc": "Webanwendung zur Aktienkursvorhersage mit AWS Forecast und Python + Flask sowie einem HTML/CSS/JS-Frontend; ausgezeichnet als „Most Complete Solution“ beim LPL Financial Hackathon 2023.",
+                "links": {
+                    "github": "GitHub",
+                    "hackathon": "Hackathon"
+                }
+            },
+            "videoPlayer": {
+                "title": "Videoplayer",
+                "desc": "Leichtgewichtiger Java-Desktop-Videoplayer für „The Office“, der Episoden mit Beschreibungen katalogisiert, über VLCJ abspielt und die zuletzt gesehene Episode samt Position fortsetzt; Metadaten per Selenium-Scraper erfasst.",
+                "links": {
+                    "github": "GitHub",
+                    "demo": "Demo"
+                }
+            },
+            "embeddedSnake": {
+                "title": "Embedded Snake Game",
+                "desc": "Snake-Spiel für STM32 von Grund auf: Joystick-Steuerung, 8×8-LED-Display und dezente Soundeffekte; schlanke Spielschleife mit verketteter Liste.",
+                "links": {
+                    "github": "GitHub",
+                    "demo": "Demo"
+                }
+            }
+        }
+    },
+    "achievements": {
+        "title": "Erfolge",
+        "hackathon": {
+            "title": "Hackathon-Gewinner — Stocker",
+            "desc": "Erster Platz für eine Aktienkurs-Vorhersage-Website mit AWS Forecast, Python + Flask und HTML/CSS/JS-Frontend.",
+            "links": {
+                "linkedin": "LinkedIn-Beitrag",
+                "github": "GitHub-Repo"
+            }
+        }
+    },
+    "experience": {
+        "title": "Erfahrung",
+        "roles": {
+            "spaII": {
+                "title": "Software Engineer II",
+                "company": "Systems Planning and Analysis (SPA)",
+                "period": "Juli 2025 – Oktober 2025",
+                "location": "San Diego, CA",
+                "bullets": [
+                    "Leitete die kontinuierliche Entwicklung eines Java-basierten Analysetools; priorisierte Nutzerfeedback und koordinierte teamübergreifende Arbeit für pünktliche Releases.",
+                    "Optimierte Arbeitsabläufe, reduzierte manuelle Schritte um ~30–50% und erhöhte den Durchsatz.",
+                    "Etablierte einen strukturierten internen Release-Zyklus mit QA-Gates; automatisierte Versionierung und standardisierte Sprint-Release-Notes für Nachverfolgbarkeit."
+                ]
+            },
+            "spaI": {
+                "title": "Software Engineer I",
+                "company": "Systems Planning and Analysis (SPA)",
+                "period": "Juni 2023 – Juli 2025",
+                "location": "San Diego, CA",
+                "bullets": [
+                    "Erweiterte ein bestehendes Java-Analysetool um neue Funktionen; verbesserte Zuverlässigkeit und Benutzerfreundlichkeit.",
+                    "Führte Vor-Ort-Schulungen für DoD-Nutzer:innen durch; sammelte und priorisierte Feedback für den Backlog.",
+                    "Lieferte das erste kundenreife Release pünktlich in einem agilen Umfeld mit positiver Abnahme."
+                ]
+            },
+            "hmeContract": {
+                "title": "Contract Software Engineer",
+                "company": "HM Electronics (HME)",
+                "period": "August 2022 – Juni 2023",
+                "location": "Carlsbad, CA",
+                "bullets": [
+                    "Koordinierte mit mehreren Teams eine CI-Pipeline zwischen Entwicklungs-Builds und automatisierten Tests mit Jenkins und Azure.",
+                    "Optimierte das Raspberry-Pi-Setup mit Ansible und steigerte die Produktivität um ~200%.",
+                    "Überarbeitete die Automatisierungsarchitektur, um die Auswahl von Executor-Nodes zu vereinfachen."
+                ]
+            },
+            "hmeIntern": {
+                "title": "Software Engineering Praktikant:in",
+                "company": "HM Electronics (HME)",
+                "period": "Juni 2022 – August 2022",
+                "location": "Carlsbad, CA",
+                "bullets": [
+                    "Entwickelte ein Frontend für eine Simulator-App mit Python + Flask.",
+                    "Vereinfachte Installation & Deployment auf Raspberry-Pi-Geräten via Shell-Skripte und Linux-Services.",
+                    "Identifizierte und behob Probleme in Python-basierten Selenium-Browser-Tests."
+                ]
+            },
+            "techForGood": {
+                "title": "Software Engineering Praktikant:in",
+                "company": "Tech For Good",
+                "period": "Juni 2021 – August 2021",
+                "location": "Boston, MA",
+                "bullets": [
+                    "Implementierte Funktionen zur Spendensammlung und -verteilung in Solidity auf Ethereum.",
+                    "Arbeitete remote mit einem Team von 7 Praktikant:innen über GitHub, Zoom und Notion zusammen."
+                ]
+            },
+            "desteam": {
+                "title": "Coding-Instructor (Praktikum)",
+                "company": "Delaware Steam Academy",
+                "period": "Juni 2021 – September 2021",
+                "location": "Newark, DE",
+                "bullets": [
+                    "Unterrichtete JavaScript in Sommer-Coding-Camps für Mittelstufenschüler:innen.",
+                    "Förderte Interesse am Programmieren und ermutigte zur weiteren Vertiefung."
+                ]
+            }
+        }
+    },
+    "education": {
+        "title": "Ausbildung",
+        "institutions": {
+            "tum": {
+                "name": "TUM — Technische Universität München",
+                "degree": "M.Sc. Informatik (laufend)",
+                "imageAlt": "Campus der Technischen Universität München"
+            },
+            "csusm": {
+                "name": "CSUSM — California State University San Marcos",
+                "degree": "B.S. Software Engineering, GPA 3,9 (2023)",
+                "imageAlt": "Campus der California State University San Marcos"
+            }
+        }
+    },
+    "footer": {
+        "copyright": "© {year} Ben Theurich — Erstellt mit Next.js + Tailwind."
+    }
+}

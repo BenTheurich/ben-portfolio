@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/context/LanguageProvider";
 
-const SITE_URL = "https://bentheurich.com"; // update if needed
+const SITE_URL = "https://bentheurich.com";
 
 const title = "Ben Theurich — Software Engineer & M.Sc. Informatics @ TUM";
 const description =
@@ -48,15 +50,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <a href="#home" className="skip-link">Skip to content</a>
-        <Nav />
-        <main id="content">{children}</main>
-        <footer className="mt-10 border-t border-black/10 dark:border-white/10">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Ben Theurich — Built with Next.js + Tailwind.
-          </div>
-        </footer>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <LanguageProvider>
+          <a href="#home" className="skip-link">Skip to content</a>
+          <Nav />
+          <main id="content">{children}</main>
+          <Footer />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        </LanguageProvider>
       </body>
     </html>
   );
