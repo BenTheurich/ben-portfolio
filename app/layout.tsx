@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
         <LanguageProvider>
           <a href="#home" className="skip-link">Skip to content</a>

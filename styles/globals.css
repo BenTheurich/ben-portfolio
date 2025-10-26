@@ -7,19 +7,12 @@
 /* Page background image (static, content scrolls on top) */
 html {
   scroll-behavior: smooth;
-  /* A semi-opaque gradient overlay ensures text remains readable over the image. */
-  background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/background.jpg');
+  /* A semi-opaque dark gradient overlay ensures text remains readable over the image. */
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    /* Dark overlay for dark mode */
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/background.jpg');
-  }
 }
 
 body {
