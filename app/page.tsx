@@ -79,7 +79,7 @@ export default function Page() {
              className="rounded-full bg-accent/10 px-5 py-2.5 text-accent hover:bg-accent/20">LinkedIn</a>
            <a href="https://github.com/BenTheurich" target="_blank" rel="noopener noreferrer"
              className="rounded-full bg-accent/10 px-5 py-2.5 text-accent hover:bg-accent/20">GitHub</a>
-           <a href="#projects" className="rounded-full bg-accent/10 px-5 py-2.5 text-accent hover:bg-accent/20">View Projects</a>
+           <a href="#projects" className="rounded-full bg-accent/10 px-5 py-2.5 text-accent hover:bg-accent/20">Projects</a>
               </div>
             </div>
           </div>
@@ -283,3 +283,17 @@ export default function Page() {
   );
 }
 
+function Skill({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="card p-5">
+      <h3 className="font-semibold">{title}</h3>
+      <ul className="mt-3 flex flex-wrap gap-2">
+        {items.map((i) => (
+          <li key={i} className="rounded-full bg-black/5 px-2.5 py-1 text-xs text-gray-700 dark:bg-white/10 dark:text-gray-200">
+            {i}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
