@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import type React from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useLanguage } from "@/context/LanguageProvider";
 import { useT } from "@/hooks/useT";
@@ -28,6 +29,13 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Smoothly scroll to the absolute top and clear any hash from the URL
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 backdrop-blur bg-offwhite/70 dark:bg-gray-950/60 ${
@@ -39,9 +47,10 @@ export default function Nav() {
         className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4"
         aria-label={t("a11y.primaryNav")}
       >
-        {/* Brand: SVG icon linking to #home */}
+        {/* Brand: SVG icon linking to top */}
         <Link
           href="#home"
+          onClick={handleHomeClick}
           aria-label="Home"
           title="Home"
           className="group inline-flex items-center rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/50 dark:focus-visible:ring-white/60"
@@ -60,19 +69,32 @@ export default function Nav() {
             <ul className="flex gap-3" role="list">
               {NAV_IDS.map((id) => {
                 const isActive = active === id;
+                const classes = `rounded-full px-3 py-1 text-sm transition ${
+                  isActive
+                    ? "bg-navy text-white dark:bg-white dark:text-black"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10"
+                }`;
+
                 return (
                   <li key={id}>
-                    <a
-                      href={`#${id}`}
-                      className={`rounded-full px-3 py-1 text-sm transition ${
-                        isActive
-                          ? "bg-navy text-white dark:bg-white dark:text-black"
-                          : "text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10"
-                      }`}
-                      aria-current={isActive ? "page" : undefined}
-                    >
-                      {t(`nav.${id}`)}
-                    </a>
+                    {id === "home" ? (
+                      <a
+                        href="#home"
+                        onClick={handleHomeClick}
+                        className={classes}
+                        aria-current={isActive ? "page" : undefined}
+                      >
+                        {t("nav.home")}
+                      </a>
+                    ) : (
+                      <a
+                        href={`#${id}`}
+                        className={classes}
+                        aria-current={isActive ? "page" : undefined}
+                      >
+                        {t(`nav.${id}`)}
+                      </a>
+                    )}
                   </li>
                 );
               })}

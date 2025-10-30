@@ -24,6 +24,9 @@ body {
 /* Sticky header + section offset */
 section[data-section] { @apply scroll-mt-0 py-20 md:py-28; }
 
+/* new: trim top padding on the first section (#home) */
+section[data-section]:first-of-type { @apply pt-8 md:pt-12; }
+
 /* Focus styles */
 :focus-visible {
   @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-offwhite dark:ring-offset-gray-950;
