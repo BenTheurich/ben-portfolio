@@ -1,0 +1,11 @@
+<!-- app/icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- background circle (deep navy) -->
+  <circle cx="256" cy="256" r="248" fill="#0b1220"/>
+  <!-- inner ring (cool gray) -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#9aa4b2" stroke-width="12"/>
+  <!-- initials "BT" (off-white) -->
+  <g fill="#f6f7fb" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="200" text-anchor="middle">
+    <text x="256" y="320" letter-spacing="2">BT</text>
+  </g>
+</svg>
