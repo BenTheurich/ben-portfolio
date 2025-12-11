@@ -83,7 +83,17 @@
         "title": "Erfolge",
         "hackathon": {
             "title": "Hackathon-Gewinner — Stocker",
-            "desc": "Erster Platz für eine Aktienkurs-Vorhersage-Website mit AWS Forecast, Python + Flask und HTML/CSS/JS-Frontend.",
+            "desc": "Erster Platz beim 24-Stunden-Hackathon von LPL Financial mit einer Aktienprognose-Webanwendung unter Einsatz von AWS Forecast, Python (Flask), Natural Language Processing zur Sentiment-Analyse und einem maßgeschneiderten HTML/CSS/JS-Frontend.",
+            "lplLink": "https://www.lpl.com/",
+            "links": {
+                "linkedin": "LinkedIn-Beitrag",
+                "github": "GitHub-Repo"
+            }
+        },
+        "hackathon2": {
+            "title": "Hackathon-Gewinner — EduComic",
+            "desc": "Gewinner der Black Forest Labs Challenge beim 24-Stunden-Hackathon von START Munich mit \"EduComic\", einer KI-gestützten Web-App, die Unterrichtseinheiten in personalisierte Comicstrips verwandelt und dabei FLUX.2-Bildgenerierung und große Sprachmodelle einsetzt.",
+            "bflLink": "https://bfl.ai/",
             "links": {
                 "linkedin": "LinkedIn-Beitrag",
                 "github": "GitHub-Repo"
