@@ -98,6 +98,15 @@
         "linkedin": "LinkedIn Post",
         "github": "GitHub Repo"
       }
+    },
+    "hackathon3": {
+      "title": "Hackathon 2nd Place — CMats",
+      "desc": "Won 2nd place in the Comstruct challenge with CMats, a voice agent system that lets construction foremen order C-materials like screws, bolts, and gloves, paired with a management platform for construction site overview and order tracking.",
+      "comstructLink": "https://comstruct.com/",
+      "links": {
+        "linkedin": "LinkedIn Post",
+        "github": "GitHub Repo"
+      }
     }
   },
   "experience": {

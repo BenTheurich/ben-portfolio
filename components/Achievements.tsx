@@ -19,6 +19,14 @@ const ACHIEVEMENTS = [
       github: "https://github.com/BenTheurich/EduComic",
     },
   },
+  {
+    key: "hackathon3",
+    imageUrl: "/achievements/hackathon-win3.jpg?v=2",
+    links: {
+      linkedin: "https://www.linkedin.com/posts/troyriveravolk_hackathon-tumai-anthropic-activity-7407011676018974720-y1qJ",
+      github: "https://github.com/FlamurMaliqi/Tum-ai-hackathon",
+    },
+  },
 ] as const;
 
 export default function Achievements() {
@@ -65,6 +73,26 @@ export default function Achievements() {
         </>
       );
     }
+    if (key === "hackathon3") {
+      const desc = t(`achievements.${key}.desc`);
+      const comstructLink = t(`achievements.${key}.comstructLink`);
+      const parts = desc.split("Comstruct");
+
+      return (
+        <>
+          {parts[0]}
+          <a
+            href={comstructLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-accent hover:underline"
+          >
+            Comstruct
+          </a>
+          {parts[1]}
+        </>
+      );
+    }
     return t(`achievements.${key}.desc`);
   };
   
@@ -73,7 +101,7 @@ export default function Achievements() {
       <div className="mx-auto max-w-6xl px-4">
         <h2 id="achievements-title" className="text-3xl md:text-4xl font-bold tracking-tight">{t("achievements.title")}</h2>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           {ACHIEVEMENTS.map((achievement) => (
             <article key={achievement.key} className="card overflow-hidden border border-black/5 p-0">
               <figure className="m-0">

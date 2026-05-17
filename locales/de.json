@@ -98,6 +98,15 @@
                 "linkedin": "LinkedIn-Beitrag",
                 "github": "GitHub-Repo"
             }
+        },
+        "hackathon3": {
+            "title": "2. Platz beim Hackathon — CMats",
+            "desc": "Zweiter Platz bei der Comstruct Challenge mit CMats, einem Voice-Agent-System, mit dem Bauleiter:innen C-Teile wie Schrauben, Bolzen und Handschuhe einfach bestellen können, ergänzt durch eine Management-Plattform für Baustellenüberblick und Bestellverfolgung.",
+            "comstructLink": "https://comstruct.com/",
+            "links": {
+                "linkedin": "LinkedIn-Beitrag",
+                "github": "GitHub-Repo"
+            }
         }
     },
     "experience": {
@@ -179,7 +188,7 @@
             },
             "csusm": {
                 "name": "CSUSM — California State University San Marcos",
-                "degree": "B.S. Software Engineering, GPA 3,9 (2023)",
+                "degree": "B.S. Software Engineering, Abschlussnote 1,3 (2023)",
                 "imageAlt": "Campus der California State University San Marcos"
             }
         }
