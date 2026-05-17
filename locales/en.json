@@ -10,10 +10,12 @@
   "a11y": {
     "skipLink": "Skip to content",
     "primaryNav": "Primary",
+    "mobileNav": "Sections",
     "profileAlt": "Portrait of Ben Theurich",
     "profileCaption": "Ben Theurich — portrait",
     "languageToggle": "Switch language",
-    "techStack": "Tech stack"
+    "techStack": "Tech stack",
+    "cardLinkLabel": "Open {title}"
   },
   "hero": {
     "location": "Munich, Germany",

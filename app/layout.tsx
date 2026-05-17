@@ -8,7 +8,7 @@ const SITE_URL = "https://bentheurich.com";
 
 const title = "Ben Theurich — Software Engineer & M.Sc. Informatics @ TUM";
 const description =
-  "Clean systems, practical ML/CV, mapping tools. Munich-based. Projects, experience, photography, and contact.";
+  "Production Java systems, practical ML/CV tooling, and selected projects from a Munich-based TUM Informatics master's student.";
 
 export const metadata: Metadata = {
   title,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description,
     url: SITE_URL,
     siteName: "Ben Theurich",
-    images: [{ url: "/projects/streetlight-cover.jpg", width: 1200, height: 630, alt: "Portfolio" }],
+    images: [{ url: "/profile/headshot.jpg", width: 1431, height: 1431, alt: "Portrait of Ben Theurich" }],
     locale: "en_US",
     type: "website",
   },
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/projects/streetlight-cover.jpg"],
+    images: ["/profile/headshot.jpg"],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
