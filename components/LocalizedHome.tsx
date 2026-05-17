@@ -1,6 +1,7 @@
 "use client";
 
 import { useT } from "@/hooks/useT";
+import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import Achievements from "@/components/Achievements";
 
 const PROJECTS = [
@@ -57,8 +58,19 @@ const EXPERIENCE_ROLES = [
   { key: "desteam" }
 ] as const;
 
+const EDUCATION_LINKS = {
+  tum: "https://www.tum.de/en/",
+  csusm: "https://www.csusm.edu/"
+} as const;
+
 export default function LocalizedHome() {
   const t = useT();
+  useRevealOnScroll();
+  const cardLinkLabel = (title: string) => t("a11y.cardLinkLabel").replace("{title}", title);
+  const projectActionLinkClass = (key: string) =>
+    `project-action-link ${
+      key === "github" ? "project-action-link-primary" : "project-action-link-secondary"
+    }`;
 
   return (
     <>
@@ -113,12 +125,12 @@ export default function LocalizedHome() {
           <h2 id="about-title" className="text-3xl md:text-4xl font-bold tracking-tight">{t("about.title")}</h2>
           <div className="mt-6 prose max-w-none dark:prose-invert">
             <div className="prose max-w-none dark:prose-invert prose-p:my-0 space-y-4">
-              <p dangerouslySetInnerHTML={{ __html: t("about.p1") }}></p>
-              <p dangerouslySetInnerHTML={{ __html: t("about.p2") }}></p>
-              <p dangerouslySetInnerHTML={{ __html: t("about.p3") }}></p>
-              <p dangerouslySetInnerHTML={{ __html: t("about.p4") }}></p>
-              <p dangerouslySetInnerHTML={{ __html: t("about.p5") }}></p>
-              <p dangerouslySetInnerHTML={{ __html: t("about.p6") }}></p>
+              <p>{t("about.p1")}</p>
+              <p>{t("about.p2")}</p>
+              <p>{t("about.p3")}</p>
+              <p>{t("about.p4")}</p>
+              <p>{t("about.p5")}</p>
+              <p>{t("about.p6")}</p>
             </div>
           </div>
         </div>
@@ -129,37 +141,51 @@ export default function LocalizedHome() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 id="projects-title" className="text-3xl md:text-4xl font-bold tracking-tight">{t("projects.title")}</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((p) => (
-              <article key={p.key} className="card overflow-hidden">
-                <div className="relative h-50 w-full bg-black/5">
-                  <img src={p.cover} alt={t(`projects.cards.${p.key}.title`) + " cover"} className="h-full w-full object-cover" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold">{t(`projects.cards.${p.key}.title`)}</h3>
-                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{t(`projects.cards.${p.key}.desc`)}</p>
-                  <ul className="mt-3 flex flex-wrap gap-2" aria-label={t("a11y.techStack")}>
-                    {p.tags.map((tag) => (
-                      <li key={tag} className="rounded-full bg-black/5 px-2.5 py-1 text-xs text-gray-700 dark:bg-white/10 dark:text-gray-200">{tag}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {p.links.map((l) => (
-                      l.href.startsWith("#") ? (
-                        <a key={l.href + l.key} href={l.href}
-                           className="text-sm text-accent underline-offset-2 hover:underline">
-                           {t(`projects.cards.${p.key}.links.${l.key}`)}
-                        </a>
-                      ) : (
-                        <a key={l.href + l.key} href={l.href} target="_blank" rel="noopener noreferrer"
-                           className="text-sm text-accent underline-offset-2 hover:underline">
-                           {t(`projects.cards.${p.key}.links.${l.key}`)}
-                        </a>
-                      )
-                    ))}
+            {PROJECTS.map((p) => {
+              const title = t(`projects.cards.${p.key}.title`);
+              const primaryHref = p.links[0].href;
+
+              return (
+                <article key={p.key} className="card motion-card clickable-card group overflow-hidden">
+                  <a
+                    href={primaryHref}
+                    target={primaryHref.startsWith("#") ? undefined : "_blank"}
+                    rel={primaryHref.startsWith("#") ? undefined : "noopener noreferrer"}
+                    className="card-overlay-link"
+                    aria-label={cardLinkLabel(title)}
+                  />
+                  <div className="relative aspect-[3/2] w-full overflow-hidden bg-black/5">
+                    <img src={p.cover} alt={title + " cover"} className="motion-card-image h-full w-full object-cover" loading="lazy" />
+                    <div className="project-tech-overlay">
+                      <ul className="project-tech-list" aria-label={t("a11y.techStack")}>
+                        {p.tags.map((tag) => (
+                          <li key={tag} className="project-tech-pill">{tag}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                  <div className="p-5">
+                    <h3 className="text-xl font-semibold">{title}</h3>
+                    <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{t(`projects.cards.${p.key}.desc`)}</p>
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {p.links.map((l) => (
+                        l.href.startsWith("#") ? (
+                          <a key={l.href + l.key} href={l.href}
+                             className={projectActionLinkClass(l.key)}>
+                             {t(`projects.cards.${p.key}.links.${l.key}`)}
+                          </a>
+                        ) : (
+                          <a key={l.href + l.key} href={l.href} target="_blank" rel="noopener noreferrer"
+                             className={projectActionLinkClass(l.key)}>
+                             {t(`projects.cards.${p.key}.links.${l.key}`)}
+                          </a>
+                        )
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -175,7 +201,7 @@ export default function LocalizedHome() {
           <ol className="mt-6 relative border-l border-black/10 pl-6 dark:border-white/10">
             {EXPERIENCE_ROLES.map((role) => (
               <li key={role.key} className="mb-8 last:mb-0">
-                <div className="absolute -left-2.5 h-5 w-5 rounded-full bg-navy dark:bg-accent" />
+                <div className="timeline-dot absolute -left-2.5 h-5 w-5 rounded-full bg-navy dark:bg-accent" />
                 <h3 className="text-lg font-semibold">{t(`experience.roles.${role.key}.title`)} — <a href="https://www.spa.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">{t(`experience.roles.${role.key}.company`)}</a></h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t(`experience.roles.${role.key}.period`)} • {t(`experience.roles.${role.key}.location`)}</p>
                 <ul className="mt-2 list-disc pl-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
@@ -196,9 +222,16 @@ export default function LocalizedHome() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 id="education-title" className="text-3xl md:text-4xl font-bold tracking-tight">{t("education.title")}</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <div className="card overflow-hidden">
-              <div className="h-40 w-full bg-black/5">
-                <img src="/education/tum.jpg" alt={t("education.institutions.tum.imageAlt")} className="h-full w-full object-cover" loading="lazy" />
+            <div className="card motion-card clickable-card group overflow-hidden">
+              <a
+                href={EDUCATION_LINKS.tum}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-overlay-link"
+                aria-label={cardLinkLabel(t("education.institutions.tum.name"))}
+              />
+              <div className="h-40 w-full overflow-hidden bg-black/5">
+                <img src="/education/tum.jpg" alt={t("education.institutions.tum.imageAlt")} className="motion-card-image h-full w-full object-cover" loading="lazy" />
               </div>
               <div className="p-5">
                 <h3 className="font-semibold">{t("education.institutions.tum.name")}</h3>
@@ -206,13 +239,20 @@ export default function LocalizedHome() {
               </div>
             </div>
 
-            <div className="card overflow-hidden">
-              <div className="h-40 w-full bg-black/5">
-                <img src="/education/csusm.jpg" alt={t("education.institutions.csusm.imageAlt")} className="h-full w-full object-cover" loading="lazy" />
+            <div className="card motion-card clickable-card group overflow-hidden">
+              <a
+                href={EDUCATION_LINKS.csusm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-overlay-link"
+                aria-label={cardLinkLabel(t("education.institutions.csusm.name"))}
+              />
+              <div className="h-40 w-full overflow-hidden bg-black/5">
+                <img src="/education/csusm.jpg" alt={t("education.institutions.csusm.imageAlt")} className="motion-card-image h-full w-full object-cover" loading="lazy" />
               </div>
               <div className="p-5">
                 <h3 className="font-semibold">{t("education.institutions.csusm.name")}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400" dangerouslySetInnerHTML={{ __html: t("education.institutions.csusm.degree") }}></p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{t("education.institutions.csusm.degree")}</p>
               </div>
             </div>
           </div>

@@ -10,27 +10,27 @@ type LanguageContextType = {
 };
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
+const isLanguage = (value: string | null): value is Language => value === "en" || value === "de";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Language>("en");
 
-  // Initialize from localStorage or navigator.language on mount
-  useEffect(() => {
-    const stored = localStorage.getItem("lang") as Language;
-    if (stored) {
-      setLangState(stored);
-    } else {
-      const browserLang = navigator.language.startsWith("de") ? "de" : "en";
-      setLangState(browserLang);
-    }
-  }, []);
-
-  // Update localStorage and document.documentElement.lang when language changes
-  const setLang = useCallback((newLang: Language) => {
+  const applyLanguage = useCallback((newLang: Language) => {
     setLangState(newLang);
     localStorage.setItem("lang", newLang);
     document.documentElement.lang = newLang;
   }, []);
+
+  // Initialize from localStorage or navigator.language on mount.
+  useEffect(() => {
+    const stored = localStorage.getItem("lang");
+    const initialLang = isLanguage(stored) ? stored : navigator.language.startsWith("de") ? "de" : "en";
+    applyLanguage(initialLang);
+  }, [applyLanguage]);
+
+  const setLang = useCallback((newLang: Language) => {
+    applyLanguage(newLang);
+  }, [applyLanguage]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>

@@ -23,6 +23,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Local Codex/browser review artifacts
+.codex-review/
+
 # IDEs and editors
 .idea
 .vscode/*

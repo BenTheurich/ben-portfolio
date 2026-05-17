@@ -36,6 +36,30 @@ export default function Nav() {
     window.history.replaceState(null, "", window.location.pathname + window.location.search);
   };
 
+  const renderNavLink = (id: (typeof NAV_IDS)[number], mobile = false) => {
+    const isActive = active === id;
+    const classes = `nav-pill ${isActive ? "nav-pill-active" : ""} ${mobile ? "shrink-0 whitespace-nowrap" : ""} rounded-full px-3 py-1 text-sm ${
+      isActive
+        ? "text-white dark:text-black"
+        : "text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10"
+    }`;
+
+    return id === "home" ? (
+      <a
+        href="#home"
+        onClick={handleHomeClick}
+        className={classes}
+        aria-current={isActive ? "page" : undefined}
+      >
+        {t("nav.home")}
+      </a>
+    ) : (
+      <a href={`#${id}`} className={classes} aria-current={isActive ? "page" : undefined}>
+        {t(`nav.${id}`)}
+      </a>
+    );
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 backdrop-blur bg-offwhite/70 dark:bg-gray-950/60 ${
@@ -67,37 +91,9 @@ export default function Nav() {
         <div className="flex items-center gap-4">
           <div className="hidden md:block">
             <ul className="flex gap-3" role="list">
-              {NAV_IDS.map((id) => {
-                const isActive = active === id;
-                const classes = `rounded-full px-3 py-1 text-sm transition ${
-                  isActive
-                    ? "bg-navy text-white dark:bg-white dark:text-black"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10"
-                }`;
-
-                return (
-                  <li key={id}>
-                    {id === "home" ? (
-                      <a
-                        href="#home"
-                        onClick={handleHomeClick}
-                        className={classes}
-                        aria-current={isActive ? "page" : undefined}
-                      >
-                        {t("nav.home")}
-                      </a>
-                    ) : (
-                      <a
-                        href={`#${id}`}
-                        className={classes}
-                        aria-current={isActive ? "page" : undefined}
-                      >
-                        {t(`nav.${id}`)}
-                      </a>
-                    )}
-                  </li>
-                );
-              })}
+              {NAV_IDS.map((id) => (
+                <li key={id}>{renderNavLink(id)}</li>
+              ))}
             </ul>
           </div>
 
@@ -129,6 +125,19 @@ export default function Nav() {
             </button>
           </div>
         </div>
+      </nav>
+
+      <nav
+        className="mx-auto max-w-6xl border-t border-black/5 px-4 py-2 dark:border-white/10 md:hidden"
+        aria-label={t("a11y.mobileNav")}
+      >
+        <ul className="mobile-nav-scroll flex gap-2 overflow-x-auto pb-1" role="list">
+          {NAV_IDS.map((id) => (
+            <li key={id} className="shrink-0">
+              {renderNavLink(id, true)}
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );

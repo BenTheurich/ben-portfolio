@@ -10,10 +10,12 @@
     "a11y": {
         "skipLink": "Zum Inhalt springen",
         "primaryNav": "Hauptnavigation",
+        "mobileNav": "Abschnitte",
         "profileAlt": "Porträt von Ben Theurich",
         "profileCaption": "Ben Theurich — Porträt",
         "languageToggle": "Sprache wechseln",
-        "techStack": "Tech-Stack"
+        "techStack": "Tech-Stack",
+        "cardLinkLabel": "Öffne {title}"
     },
     "hero": {
         "location": "München, Deutschland",

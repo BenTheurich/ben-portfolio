@@ -15,6 +15,12 @@ html {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 767px) {
+  html {
+    background-attachment: scroll;
+  }
+}
+
 body {
   /* Make the body transparent so the html background image remains visible. */
   @apply bg-transparent text-gray-900 dark:text-gray-100 antialiased;
@@ -22,7 +28,7 @@ body {
 }
 
 /* Sticky header + section offset */
-section[data-section] { @apply scroll-mt-0 py-20 md:py-28; }
+section[data-section] { @apply scroll-mt-24 py-14 md:py-20; }
 
 /* new: trim top padding on the first section (#home) */
 section[data-section]:first-of-type { @apply pt-8 md:pt-12; }
@@ -50,6 +56,215 @@ section[data-section]:first-of-type { @apply pt-8 md:pt-12; }
 
 /* Simple card */
 .card { @apply rounded-2xl bg-white/80 dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-subtle; }
+
+.clickable-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-overlay-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.clickable-card > :not(.card-overlay-link) {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clickable-card a:not(.card-overlay-link),
+.clickable-card button {
+  pointer-events: auto;
+}
+
+.card-overlay-link:focus-visible {
+  z-index: 3;
+}
+
+.project-action-link {
+  @apply inline-flex items-center whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-medium leading-none transition-colors;
+}
+
+.project-action-link-primary {
+  @apply border-transparent bg-accent/10 text-accent hover:bg-accent/20;
+}
+
+.project-action-link-secondary {
+  @apply border-black/10 bg-white/60 text-gray-700 hover:bg-white dark:border-white/20 dark:bg-white/5 dark:text-gray-200 dark:hover:bg-white/10;
+}
+
+.project-tech-overlay {
+  @apply absolute inset-0 hidden items-center justify-center p-4 sm:flex;
+}
+
+.project-tech-overlay::before {
+  content: "";
+  @apply absolute inset-0 bg-gray-950/60;
+  opacity: 0;
+}
+
+.clickable-card:hover .project-tech-overlay::before,
+.clickable-card:focus-within .project-tech-overlay::before {
+  opacity: 1;
+}
+
+.project-tech-list {
+  @apply relative z-10 flex max-w-[92%] flex-wrap justify-center gap-2;
+  visibility: hidden;
+  transform: translateY(4px);
+}
+
+.clickable-card:hover .project-tech-list,
+.clickable-card:focus-within .project-tech-list {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.project-tech-pill {
+  @apply rounded-full border border-white/20 bg-white/20 px-3 py-1 text-xs font-medium leading-none text-white shadow-subtle backdrop-blur;
+}
+
+.nav-pill-active {
+  background: #0f1b2d;
+}
+
+.dark .nav-pill-active {
+  background: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-reveal-ready .reveal-once {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 620ms ease, transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .motion-reveal-ready section[data-section],
+  .motion-reveal-ready .timeline-dot {
+    transition-delay: 60ms;
+  }
+
+  .motion-reveal-ready section[data-section] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 620ms ease, transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .motion-reveal-ready section[data-section].is-visible,
+  .motion-reveal-ready .reveal-once.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .motion-card {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    will-change: transform;
+  }
+
+  .motion-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  }
+
+  .motion-card-image {
+    transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .motion-card:hover .motion-card-image {
+    transform: scale(1.03);
+  }
+
+  .project-tech-overlay::before {
+    transition: opacity 220ms ease;
+  }
+
+  .project-tech-list {
+    transition: transform 180ms ease;
+  }
+
+  .nav-pill {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: color 180ms ease;
+  }
+
+  .nav-pill-active {
+    background: transparent;
+  }
+
+  .nav-pill::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    background: #0f1b2d;
+    opacity: 0;
+    transform: translateY(4px) scale(0.94);
+    transition: opacity 180ms ease, transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .dark .nav-pill::before {
+    background: #fff;
+  }
+
+  .nav-pill-active::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    opacity: 0.8;
+  }
+
+  .timeline-dot.is-visible {
+    opacity: 1;
+  }
+
+  .timeline-dot::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    border: 1px solid rgba(110,168,254,0.45);
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  .timeline-dot.is-visible::after {
+    animation: timeline-dot-pulse 900ms ease-out 1;
+  }
+
+  @keyframes timeline-dot-pulse {
+    0% {
+      opacity: 0.35;
+      transform: scale(0.7);
+    }
+    70% {
+      opacity: 0.14;
+      transform: scale(1.6);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+}
+
+/* Mobile section rail */
+.mobile-nav-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mobile-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
 
 /* Skip link */
 .skip-link {
