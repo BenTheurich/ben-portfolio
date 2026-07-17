@@ -72,7 +72,7 @@ section[data-section]:first-of-type {
 .retype-word {
   display: inline-block;
   animation: retype-word var(--retype-duration) steps(var(--retype-characters), start)
-    var(--retype-delay) both;
+    var(--retype-delay) backwards;
 }
 
 @keyframes retype-word {
