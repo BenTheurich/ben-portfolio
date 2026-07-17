@@ -114,6 +114,15 @@
   "experience": {
     "title": "Experience",
     "roles": {
+      "hefex": {
+        "title": "Software Engineer, Computer Vision (TUM Interdisciplinary Project)",
+        "company": "Hefex Labs",
+        "period": "Mar 2026 – Present",
+        "location": "Munich",
+        "bullets": [
+          "Developing segmentation models and integrating them into an applied computer-vision pipeline."
+        ]
+      },
       "spaII": {
         "title": "Software Engineer II",
         "company": "Systems Planning and Analysis (SPA)",

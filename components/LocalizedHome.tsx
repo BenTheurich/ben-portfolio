@@ -50,12 +50,13 @@ const PROJECTS = [
 ];
 
 const EXPERIENCE_ROLES = [
-  { key: "spaII" },
-  { key: "spaI" },
-  { key: "hmeContract" },
-  { key: "hmeIntern" },
-  { key: "techForGood" },
-  { key: "desteam" }
+  { key: "hefex", href: "https://hefex-labs.com/" },
+  { key: "spaII", href: "https://www.spa.com/" },
+  { key: "spaI", href: "https://www.spa.com/" },
+  { key: "hmeContract", href: "https://www.hme.com/" },
+  { key: "hmeIntern", href: "https://www.hme.com/" },
+  { key: "techForGood", href: "https://www.techforgoodinc.org/" },
+  { key: "desteam", href: "https://desteam.org/" }
 ] as const;
 
 const EDUCATION_LINKS = {
@@ -202,7 +203,11 @@ export default function LocalizedHome() {
             {EXPERIENCE_ROLES.map((role) => (
               <li key={role.key} className="mb-8 last:mb-0">
                 <div className="timeline-dot absolute -left-2.5 h-5 w-5 rounded-full bg-navy dark:bg-accent" />
-                <h3 className="text-lg font-semibold">{t(`experience.roles.${role.key}.title`)} — <a href="https://www.spa.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">{t(`experience.roles.${role.key}.company`)}</a></h3>
+                <h3 className="text-lg font-semibold">
+                  {t(`experience.roles.${role.key}.title`)} — <a href={role.href} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">
+                    {t(`experience.roles.${role.key}.company`)}
+                  </a>
+                </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t(`experience.roles.${role.key}.period`)} • {t(`experience.roles.${role.key}.location`)}</p>
                 <ul className="mt-2 list-disc pl-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
                   {Array.from({ length: 3 }).map((_, i) => {
