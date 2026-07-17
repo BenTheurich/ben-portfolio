@@ -75,6 +75,11 @@ section[data-section]:first-of-type {
     var(--retype-delay) backwards;
 }
 
+.underline .retype-word,
+.hover\:underline:hover .retype-word {
+  text-decoration-line: underline;
+}
+
 @keyframes retype-word {
   from {
     clip-path: inset(0 100% 0 0);
