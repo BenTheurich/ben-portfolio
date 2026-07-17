@@ -6,6 +6,16 @@ import Achievements from "@/components/Achievements";
 
 const PROJECTS = [
   {
+    key: "rmfindr",
+    cover: "/projects/rmfindr-cover.png",
+    tags: ["Python", "FastAPI", "React", "scikit-learn", "WebSockets", "Wi-Fi RSSI"],
+    links: [
+      { key: "github", href: "https://github.com/BenTheurich/EuroTech-Hackathon" },
+      { key: "productDemo", href: "https://youtu.be/7gwtqk34Jds" },
+      { key: "technicalDemo", href: "https://youtu.be/ev5DqIyfHig" }
+    ]
+  },
+  {
     key: "timeSeriesAnnotator",
     cover: "/projects/annotator-cover.jpg",
     tags: ["Java", "JFreeChart", "Swing", "CSV", "HDF5"],

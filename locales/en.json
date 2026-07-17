@@ -40,6 +40,15 @@
   "projects": {
     "title": "Projects",
     "cards": {
+      "rmfindr": {
+        "title": "RmFindr",
+        "desc": "Indoor-positioning prototype that learns Wi-Fi signal fingerprints to estimate live location. Streams filtered RSSI scans through a FastAPI/WebSocket backend and KNN localizer to a React map.",
+        "links": {
+          "github": "GitHub",
+          "productDemo": "Product Demo",
+          "technicalDemo": "Technical Demo"
+        }
+      },
       "timeSeriesAnnotator": {
         "title": "Time Series Annotator",
         "desc": "Cross-platform Java desktop tool to visualize and annotate multivariate time-series (CSV/HDF5) for Tandem Diabetes Care; supports linked, resizable charts (line/step/scatter), zoom/pan, and import/export of annotations.",
@@ -88,8 +97,8 @@
       "desc": "Won first place in LPL Financial's 24-hour hackathon with a stock prediction web app using AWS Forecast, Python (Flask), Natural Language Processing for news article sentiment analysis, and a custom HTML/CSS/JS frontend.",
       "lplLink": "https://www.lpl.com/",
       "links": {
-        "linkedin": "LinkedIn Post",
-        "github": "GitHub Repo"
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
       }
     },
     "hackathon2": {
@@ -97,8 +106,9 @@
       "desc": "Won the Black Forest Labs challenge at START Munich's 24-hour hackathon with \"EduComic,\" an AI-powered web app that turns classroom lessons into personalized comic strips using FLUX.2 image generation and LLMs.",
       "bflLink": "https://bfl.ai/",
       "links": {
-        "linkedin": "LinkedIn Post",
-        "github": "GitHub Repo"
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "pitchDeck": "Pitch Deck"
       }
     },
     "hackathon3": {
@@ -106,8 +116,8 @@
       "desc": "Won 2nd place in the Comstruct challenge with CMats, a voice agent system that lets construction foremen order C-materials like screws, bolts, and gloves, paired with a management platform for construction site overview and order tracking.",
       "comstructLink": "https://comstruct.com/",
       "links": {
-        "linkedin": "LinkedIn Post",
-        "github": "GitHub Repo"
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
       }
     }
   },

@@ -17,6 +17,7 @@ const ACHIEVEMENTS = [
     links: {
       linkedin: "https://www.linkedin.com/posts/stephen-batifol_a-week-ago-we-joined-start-munichs-road-activity-7403771653228224512-8TjT",
       github: "https://github.com/BenTheurich/EduComic",
+      pitchDeck: "/achievements/educomic-pitch.pdf",
     },
   },
   {
@@ -148,6 +149,17 @@ export default function Achievements() {
                           className="rounded-full bg-accent/10 px-4 py-2 text-sm text-accent hover:bg-accent/20"
                         >
                           {t(`achievements.${achievement.key}.links.github`)}
+                        </a>
+                      )}
+
+                      {"pitchDeck" in achievement.links && (
+                        <a
+                          href={achievement.links.pitchDeck}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-full border border-black/10 px-4 py-2 text-sm dark:border-white/20"
+                        >
+                          {t(`achievements.${achievement.key}.links.pitchDeck`)}
                         </a>
                       )}
                     </div>

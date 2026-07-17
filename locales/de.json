@@ -40,6 +40,15 @@
     "projects": {
         "title": "Projekte",
         "cards": {
+            "rmfindr": {
+                "title": "RmFindr",
+                "desc": "Indoor-Positioning-Prototyp, der WLAN-Signalfingerprints zur Live-Positionsschätzung nutzt. Überträgt gefilterte RSSI-Scans durch ein FastAPI-/WebSocket-Backend und einen KNN-Lokalisierer an eine React-Karte.",
+                "links": {
+                    "github": "GitHub",
+                    "productDemo": "Produktdemo",
+                    "technicalDemo": "Technische Demo"
+                }
+            },
             "timeSeriesAnnotator": {
                 "title": "Zeitreihen-Annotator",
                 "desc": "Plattformübergreifendes Java-Desktop-Tool zur Visualisierung und Annotation multivariater Zeitreihen (CSV/HDF5) für Tandem Diabetes Care; unterstützt verknüpfte, größenverstellbare Diagramme (Linien-, Stufen- und Punktdiagramme), Zoom/Pan sowie Import/Export von Annotationen.",
@@ -88,8 +97,8 @@
             "desc": "Erster Platz beim 24-Stunden-Hackathon von LPL Financial mit einer Aktienprognose-Webanwendung unter Einsatz von AWS Forecast, Python (Flask), Natural Language Processing zur Sentiment-Analyse und einem maßgeschneiderten HTML/CSS/JS-Frontend.",
             "lplLink": "https://www.lpl.com/",
             "links": {
-                "linkedin": "LinkedIn-Beitrag",
-                "github": "GitHub-Repo"
+                "linkedin": "LinkedIn",
+                "github": "GitHub"
             }
         },
         "hackathon2": {
@@ -97,8 +106,9 @@
             "desc": "Gewinner der Black Forest Labs Challenge beim 24-Stunden-Hackathon von START Munich mit \"EduComic\", einer KI-gestützten Web-App, die Unterrichtseinheiten in personalisierte Comicstrips verwandelt und dabei FLUX.2-Bildgenerierung und große Sprachmodelle einsetzt.",
             "bflLink": "https://bfl.ai/",
             "links": {
-                "linkedin": "LinkedIn-Beitrag",
-                "github": "GitHub-Repo"
+                "linkedin": "LinkedIn",
+                "github": "GitHub",
+                "pitchDeck": "Pitch-Deck"
             }
         },
         "hackathon3": {
@@ -106,8 +116,8 @@
             "desc": "Zweiter Platz bei der Comstruct Challenge mit CMats, einem Voice-Agent-System, mit dem Bauleiter:innen C-Teile wie Schrauben, Bolzen und Handschuhe einfach bestellen können, ergänzt durch eine Management-Plattform für Baustellenüberblick und Bestellverfolgung.",
             "comstructLink": "https://comstruct.com/",
             "links": {
-                "linkedin": "LinkedIn-Beitrag",
-                "github": "GitHub-Repo"
+                "linkedin": "LinkedIn",
+                "github": "GitHub"
             }
         }
     },
