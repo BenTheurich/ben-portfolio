@@ -1,13 +1,15 @@
 "use client";
 
 import { useT } from "@/hooks/useT";
+import RetypeText from "@/components/RetypeText";
 
 const ACHIEVEMENTS = [
   {
     key: "hackathon",
     imageUrl: "/achievements/hackathon-win.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/posts/csusm-college-of-science-and-mathematics_outstandingstudents-softwarengineering-engineering-activity-7033546542863028224-DBjz/",
+      linkedin:
+        "https://www.linkedin.com/posts/csusm-college-of-science-and-mathematics_outstandingstudents-softwarengineering-engineering-activity-7033546542863028224-DBjz/",
       github: "https://github.com/BenTheurich/Stocker",
     },
   },
@@ -15,7 +17,8 @@ const ACHIEVEMENTS = [
     key: "hackathon2",
     imageUrl: "/achievements/hackathon-win2.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/posts/stephen-batifol_a-week-ago-we-joined-start-munichs-road-activity-7403771653228224512-8TjT",
+      linkedin:
+        "https://www.linkedin.com/posts/stephen-batifol_a-week-ago-we-joined-start-munichs-road-activity-7403771653228224512-8TjT",
       github: "https://github.com/BenTheurich/EduComic",
       pitchDeck: "/achievements/educomic-pitch.pdf",
     },
@@ -24,7 +27,8 @@ const ACHIEVEMENTS = [
     key: "hackathon3",
     imageUrl: "/achievements/hackathon-win3.jpg?v=2",
     links: {
-      linkedin: "https://www.linkedin.com/posts/troyriveravolk_hackathon-tumai-anthropic-activity-7407011676018974720-y1qJ",
+      linkedin:
+        "https://www.linkedin.com/posts/troyriveravolk_hackathon-tumai-anthropic-activity-7407011676018974720-y1qJ",
       github: "https://github.com/FlamurMaliqi/Tum-ai-hackathon",
     },
   },
@@ -33,25 +37,25 @@ const ACHIEVEMENTS = [
 export default function Achievements() {
   const t = useT();
   const cardLinkLabel = (title: string) => t("a11y.cardLinkLabel").replace("{title}", title);
-  
+
   const renderDescription = (key: string) => {
     if (key === "hackathon") {
       const desc = t(`achievements.${key}.desc`);
       const lplLink = t(`achievements.${key}.lplLink`);
       const parts = desc.split("LPL Financial");
-      
+
       return (
         <>
-          {parts[0]}
+          <RetypeText>{parts[0]}</RetypeText>
           <a
             href={lplLink}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-accent hover:underline"
           >
-            LPL Financial
+            <RetypeText>LPL Financial</RetypeText>
           </a>
-          {parts[1]}
+          <RetypeText>{parts[1]}</RetypeText>
         </>
       );
     }
@@ -59,19 +63,19 @@ export default function Achievements() {
       const desc = t(`achievements.${key}.desc`);
       const bflLink = t(`achievements.${key}.bflLink`);
       const parts = desc.split("Black Forest Labs");
-      
+
       return (
         <>
-          {parts[0]}
+          <RetypeText>{parts[0]}</RetypeText>
           <a
             href={bflLink}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-accent hover:underline"
           >
-            Black Forest Labs
+            <RetypeText>Black Forest Labs</RetypeText>
           </a>
-          {parts[1]}
+          <RetypeText>{parts[1]}</RetypeText>
         </>
       );
     }
@@ -82,33 +86,38 @@ export default function Achievements() {
 
       return (
         <>
-          {parts[0]}
+          <RetypeText>{parts[0]}</RetypeText>
           <a
             href={comstructLink}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-accent hover:underline"
           >
-            Comstruct
+            <RetypeText>Comstruct</RetypeText>
           </a>
-          {parts[1]}
+          <RetypeText>{parts[1]}</RetypeText>
         </>
       );
     }
-    return t(`achievements.${key}.desc`);
+    return <RetypeText>{t(`achievements.${key}.desc`)}</RetypeText>;
   };
-  
+
   return (
     <section id="achievements" data-section aria-labelledby="achievements-title">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 id="achievements-title" className="text-3xl md:text-4xl font-bold tracking-tight">{t("achievements.title")}</h2>
+        <h2 id="achievements-title" className="text-3xl md:text-4xl font-bold tracking-tight">
+          <RetypeText>{t("achievements.title")}</RetypeText>
+        </h2>
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {ACHIEVEMENTS.map((achievement) => {
             const title = t(`achievements.${achievement.key}.title`);
 
             return (
-              <article key={achievement.key} className="card motion-card clickable-card group overflow-hidden border border-black/5 p-0">
+              <article
+                key={achievement.key}
+                className="card motion-card clickable-card group overflow-hidden border border-black/5 p-0"
+              >
                 <a
                   href={achievement.links.linkedin}
                   target="_blank"
@@ -126,8 +135,12 @@ export default function Achievements() {
                     />
                   </div>
                   <figcaption className="p-5">
-                    <h3 className="text-xl font-semibold">{title}</h3>
-                    <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{renderDescription(achievement.key)}</p>
+                    <h3 className="text-xl font-semibold">
+                      <RetypeText>{title}</RetypeText>
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                      {renderDescription(achievement.key)}
+                    </p>
 
                     <div className="mt-4 flex flex-wrap gap-3">
                       {achievement.links.linkedin && (
@@ -137,7 +150,9 @@ export default function Achievements() {
                           rel="noopener noreferrer"
                           className="rounded-full border border-black/10 px-4 py-2 text-sm dark:border-white/20"
                         >
-                          {t(`achievements.${achievement.key}.links.linkedin`)}
+                          <RetypeText>
+                            {t(`achievements.${achievement.key}.links.linkedin`)}
+                          </RetypeText>
                         </a>
                       )}
 
@@ -148,7 +163,9 @@ export default function Achievements() {
                           rel="noopener noreferrer"
                           className="rounded-full bg-accent/10 px-4 py-2 text-sm text-accent hover:bg-accent/20"
                         >
-                          {t(`achievements.${achievement.key}.links.github`)}
+                          <RetypeText>
+                            {t(`achievements.${achievement.key}.links.github`)}
+                          </RetypeText>
                         </a>
                       )}
 
@@ -159,7 +176,9 @@ export default function Achievements() {
                           rel="noopener noreferrer"
                           className="rounded-full border border-black/10 px-4 py-2 text-sm dark:border-white/20"
                         >
-                          {t(`achievements.${achievement.key}.links.pitchDeck`)}
+                          <RetypeText>
+                            {t(`achievements.${achievement.key}.links.pitchDeck`)}
+                          </RetypeText>
                         </a>
                       )}
                     </div>

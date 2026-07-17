@@ -6,15 +6,9 @@ import type React from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useLanguage } from "@/context/LanguageProvider";
 import { useT } from "@/hooks/useT";
+import RetypeText from "@/components/RetypeText";
 
-const NAV_IDS = [
-  "home",
-  "about",
-  "projects",
-  "achievements",
-  "experience",
-  "education",
-] as const;
+const NAV_IDS = ["home", "about", "projects", "achievements", "experience", "education"] as const;
 
 export default function Nav() {
   const t = useT();
@@ -51,11 +45,11 @@ export default function Nav() {
         className={classes}
         aria-current={isActive ? "page" : undefined}
       >
-        {t("nav.home")}
+        <RetypeText>{t("nav.home")}</RetypeText>
       </a>
     ) : (
       <a href={`#${id}`} className={classes} aria-current={isActive ? "page" : undefined}>
-        {t(`nav.${id}`)}
+        <RetypeText>{t(`nav.${id}`)}</RetypeText>
       </a>
     );
   };

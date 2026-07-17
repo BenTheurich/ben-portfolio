@@ -1,15 +1,16 @@
 "use client";
 
 import { useT } from "@/hooks/useT";
+import RetypeText from "@/components/RetypeText";
 
 export default function Footer() {
   const t = useT();
   const copyright = t("footer.copyright").replace("{year}", new Date().getFullYear().toString());
-  
+
   return (
     <footer className="mt-10 border-t border-black/10 dark:border-white/10">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600 dark:text-gray-400">
-        {copyright}
+        <RetypeText>{copyright}</RetypeText>
       </div>
     </footer>
   );
