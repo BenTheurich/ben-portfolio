@@ -163,7 +163,7 @@ section[data-section]:first-of-type {
 }
 
 .clickable-card:hover .project-tech-overlay::before,
-.clickable-card:focus-within .project-tech-overlay::before {
+.clickable-card:has(:focus-visible) .project-tech-overlay::before {
   opacity: 1;
 }
 
@@ -174,7 +174,7 @@ section[data-section]:first-of-type {
 }
 
 .clickable-card:hover .project-tech-list,
-.clickable-card:focus-within .project-tech-list {
+.clickable-card:has(:focus-visible) .project-tech-list {
   visibility: visible;
   transform: translateY(0);
 }
