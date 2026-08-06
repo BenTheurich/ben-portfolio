@@ -45,7 +45,7 @@
                 "desc": "Indoor-Positioning-Prototyp, der WLAN-Signalfingerprints zur Live-Positionsschätzung nutzt. Überträgt gefilterte RSSI-Scans durch ein FastAPI-/WebSocket-Backend und einen KNN-Lokalisierer an eine React-Karte.",
                 "links": {
                     "github": "GitHub",
-                    "productDemo": "Produktdemo",
+                    "productDemo": "Demo",
                     "technicalDemo": "Technische Demo"
                 }
             },
@@ -53,15 +53,17 @@
                 "title": "Zeitreihen-Annotator",
                 "desc": "Plattformübergreifendes Java-Desktop-Tool zur Visualisierung und Annotation multivariater Zeitreihen (CSV/HDF5) für Tandem Diabetes Care; unterstützt verknüpfte, größenverstellbare Diagramme (Linien-, Stufen- und Punktdiagramme), Zoom/Pan sowie Import/Export von Annotationen.",
                 "links": {
-                    "github": "GitHub"
+                    "github": "GitHub",
+                    "tandem": "Tandem"
                 }
             },
-            "securiKey": {
-                "title": "SecuriKey",
-                "desc": "Portabler Java-Desktop-Passwortmanager. Schützt Einträge mit einem Master-Passwort (SHA-256-Hash) und verschlüsselt gespeicherte Passwörter; unterstützt Hinzufügen/Bearbeiten/Löschen/Suchen über eine einfache GUI.",
+            "eduComic": {
+                "title": "EduComic",
+                "desc": "Hackathon-prämierter EdTech-Prototyp, der Unterrichtsmaterialien in quellengestützte Comics mit fiktiven Schüler-Avataren verwandelt. Entwickelt in einem fünfköpfigen Team beim 24-Stunden-Hackathon von START Munich.",
                 "links": {
+                    "liveDemo": "Live-Demo",
                     "github": "GitHub",
-                    "demo": "Demo"
+                    "pitchDeck": "Pitch-Deck"
                 }
             },
             "stocker": {
@@ -103,7 +105,7 @@
         },
         "hackathon2": {
             "title": "Hackathon-Gewinner — EduComic",
-            "desc": "Gewinner der Black Forest Labs Challenge beim 24-Stunden-Hackathon von START Munich mit \"EduComic\", einer KI-gestützten Web-App, die Unterrichtseinheiten in personalisierte Comicstrips verwandelt und dabei FLUX.2-Bildgenerierung und große Sprachmodelle einsetzt.",
+            "desc": "EduComic entstand in 24 Stunden in einem fünfköpfigen Team und gewann die Black Forest Labs Challenge beim Hackathon von START Munich. Die funktionsfähige Demo verwandelte Unterrichtsmaterialien mit FLUX.2 und OpenAI in quellengestützte Comics.",
             "bflLink": "https://bfl.ai/",
             "links": {
                 "linkedin": "LinkedIn",

@@ -45,7 +45,7 @@
         "desc": "Indoor-positioning prototype that learns Wi-Fi signal fingerprints to estimate live location. Streams filtered RSSI scans through a FastAPI/WebSocket backend and KNN localizer to a React map.",
         "links": {
           "github": "GitHub",
-          "productDemo": "Product Demo",
+          "productDemo": "Demo",
           "technicalDemo": "Technical Demo"
         }
       },
@@ -53,15 +53,17 @@
         "title": "Time Series Annotator",
         "desc": "Cross-platform Java desktop tool to visualize and annotate multivariate time-series (CSV/HDF5) for Tandem Diabetes Care; supports linked, resizable charts (line/step/scatter), zoom/pan, and import/export of annotations.",
         "links": {
-          "github": "GitHub"
+          "github": "GitHub",
+          "tandem": "Tandem"
         }
       },
-      "securiKey": {
-        "title": "SecuriKey",
-        "desc": "Portable Java desktop password manager. Protects entries with a master password (hashed with SHA-256) and encrypts stored passwords; supports add/edit/delete/search via a simple GUI.",
+      "eduComic": {
+        "title": "EduComic",
+        "desc": "Hackathon-winning classroom storytelling prototype that turns lesson materials into source-grounded comics starring fictional student avatars. Built by a five-person team during START Munich's 24-hour hackathon.",
         "links": {
+          "liveDemo": "Live Demo",
           "github": "GitHub",
-          "demo": "Demo"
+          "pitchDeck": "Pitch Deck"
         }
       },
       "stocker": {
@@ -103,7 +105,7 @@
     },
     "hackathon2": {
       "title": "Hackathon Winner — EduComic",
-      "desc": "Won the Black Forest Labs challenge at START Munich's 24-hour hackathon with \"EduComic,\" an AI-powered web app that turns classroom lessons into personalized comic strips using FLUX.2 image generation and LLMs.",
+      "desc": "Built in 24 hours by a five-person team, EduComic won the Black Forest Labs challenge at START Munich's hackathon. The working demo turned lesson materials into source-grounded comics using FLUX.2 and OpenAI.",
       "bflLink": "https://bfl.ai/",
       "links": {
         "linkedin": "LinkedIn",

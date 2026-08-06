@@ -7,6 +7,16 @@ import RetypeText from "@/components/RetypeText";
 
 const PROJECTS = [
   {
+    key: "eduComic",
+    cover: "/projects/educomic-cover.png",
+    tags: ["FLUX.2", "OpenAI", "Image Generation", "LLMs", "EdTech"],
+    links: [
+      { key: "liveDemo", href: "https://bentheurich.github.io/EduComic/" },
+      { key: "github", href: "https://github.com/BenTheurich/EduComic" },
+      { key: "pitchDeck", href: "/achievements/educomic-pitch.pdf" },
+    ],
+  },
+  {
     key: "rmfindr",
     cover: "/projects/rmfindr-cover.png",
     tags: ["Python", "FastAPI", "React", "scikit-learn", "WebSockets", "Wi-Fi RSSI"],
@@ -22,18 +32,7 @@ const PROJECTS = [
     tags: ["Java", "JFreeChart", "Swing", "CSV", "HDF5"],
     links: [
       { key: "github", href: "https://github.com/BenTheurich/MultivariateTimeSeriesAnnotator" },
-    ],
-  },
-  {
-    key: "securiKey",
-    cover: "/projects/securikey-cover.jpg",
-    tags: ["Java", "Encryption", "SHA-256"],
-    links: [
-      { key: "github", href: "https://github.com/BenTheurich/SecuriKeyGUI" },
-      {
-        key: "demo",
-        href: "https://github.com/BenTheurich/SecuriKeyGUI?tab=readme-ov-file#class-presentation-demo",
-      },
+      { key: "tandem", href: "https://www.tandemdiabetes.com/" },
     ],
   },
   {
@@ -90,9 +89,9 @@ export default function LocalizedHome() {
   const t = useT();
   useRevealOnScroll();
   const cardLinkLabel = (title: string) => t("a11y.cardLinkLabel").replace("{title}", title);
-  const projectActionLinkClass = (key: string) =>
+  const projectActionLinkClass = (isPrimary: boolean) =>
     `project-action-link ${
-      key === "github" ? "project-action-link-primary" : "project-action-link-secondary"
+      isPrimary ? "project-action-link-primary" : "project-action-link-secondary"
     }`;
 
   return (
@@ -217,7 +216,7 @@ export default function LocalizedHome() {
               return (
                 <article
                   key={p.key}
-                  className="card motion-card clickable-card group overflow-hidden"
+                  className="card motion-card clickable-card group flex h-full flex-col overflow-hidden"
                 >
                   <a
                     href={primaryHref}
@@ -243,20 +242,20 @@ export default function LocalizedHome() {
                       </ul>
                     </div>
                   </div>
-                  <div className="p-5">
+                  <div className="flex flex-1 flex-col p-5">
                     <h3 className="text-xl font-semibold">
                       <RetypeText>{title}</RetypeText>
                     </h3>
                     <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                       <RetypeText>{t(`projects.cards.${p.key}.desc`)}</RetypeText>
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {p.links.map((l) =>
+                    <div className="mt-auto flex flex-wrap gap-3 pt-4">
+                      {p.links.map((l, index) =>
                         l.href.startsWith("#") ? (
                           <a
                             key={l.href + l.key}
                             href={l.href}
-                            className={projectActionLinkClass(l.key)}
+                            className={projectActionLinkClass(index === 0)}
                           >
                             <RetypeText>{t(`projects.cards.${p.key}.links.${l.key}`)}</RetypeText>
                           </a>
@@ -266,7 +265,7 @@ export default function LocalizedHome() {
                             href={l.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={projectActionLinkClass(l.key)}
+                            className={projectActionLinkClass(index === 0)}
                           >
                             <RetypeText>{t(`projects.cards.${p.key}.links.${l.key}`)}</RetypeText>
                           </a>

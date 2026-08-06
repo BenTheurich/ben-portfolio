@@ -116,7 +116,7 @@ export default function Achievements() {
             return (
               <article
                 key={achievement.key}
-                className="card motion-card clickable-card group overflow-hidden border border-black/5 p-0"
+                className="card motion-card clickable-card group flex h-full flex-col overflow-hidden border border-black/5 p-0"
               >
                 <a
                   href={achievement.links.linkedin}
@@ -125,7 +125,7 @@ export default function Achievements() {
                   className="card-overlay-link"
                   aria-label={cardLinkLabel(title)}
                 />
-                <figure className="m-0">
+                <figure className="m-0 flex flex-1 flex-col">
                   <div className="relative aspect-[2.4/1] w-full overflow-hidden bg-black/5">
                     <img
                       src={achievement.imageUrl}
@@ -134,7 +134,7 @@ export default function Achievements() {
                       loading="lazy"
                     />
                   </div>
-                  <figcaption className="p-5">
+                  <figcaption className="flex flex-1 flex-col p-5">
                     <h3 className="text-xl font-semibold">
                       <RetypeText>{title}</RetypeText>
                     </h3>
@@ -142,13 +142,13 @@ export default function Achievements() {
                       {renderDescription(achievement.key)}
                     </p>
 
-                    <div className="mt-4 flex flex-wrap gap-3">
+                    <div className="mt-auto flex flex-wrap gap-3 pt-4">
                       {achievement.links.linkedin && (
                         <a
                           href={achievement.links.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full border border-black/10 px-4 py-2 text-sm dark:border-white/20"
+                          className="project-action-link project-action-link-primary"
                         >
                           <RetypeText>
                             {t(`achievements.${achievement.key}.links.linkedin`)}
@@ -161,7 +161,7 @@ export default function Achievements() {
                           href={achievement.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full bg-accent/10 px-4 py-2 text-sm text-accent hover:bg-accent/20"
+                          className="project-action-link project-action-link-secondary"
                         >
                           <RetypeText>
                             {t(`achievements.${achievement.key}.links.github`)}
@@ -174,7 +174,7 @@ export default function Achievements() {
                           href={achievement.links.pitchDeck}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full border border-black/10 px-4 py-2 text-sm dark:border-white/20"
+                          className="project-action-link project-action-link-secondary"
                         >
                           <RetypeText>
                             {t(`achievements.${achievement.key}.links.pitchDeck`)}

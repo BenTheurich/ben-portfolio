@@ -3,7 +3,27 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
+  scrollbar-color: rgba(138, 148, 166, 0.72) #030712;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 1px solid #030712;
+  border-radius: 9999px;
+  background: rgba(138, 148, 166, 0.72);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #6ea8fe;
 }
 
 /* Page background image (static, content scrolls on top) */
