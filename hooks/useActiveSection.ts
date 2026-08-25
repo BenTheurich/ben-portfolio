@@ -7,7 +7,11 @@ export function useActiveSection(ids: string[]) {
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-    const opts: IntersectionObserverInit = { root: null, rootMargin: "-50% 0px -50% 0px", threshold: 0 };
+    const opts: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0,
+    };
 
     const onIntersect = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {

@@ -4,7 +4,7 @@ const nextConfig = {
   output: "export",
 
   // Use normal <img> tags or set this if you use next/image
-  images: { unoptimized: true }
+  images: { unoptimized: true },
 };
 
 module.exports = nextConfig;

@@ -19,7 +19,9 @@ export const metadata: Metadata = {
     description,
     url: SITE_URL,
     siteName: "Ben Theurich",
-    images: [{ url: "/profile/headshot.jpg", width: 1431, height: 1431, alt: "Portrait of Ben Theurich" }],
+    images: [
+      { url: "/profile/headshot.jpg", width: 1431, height: 1431, alt: "Portrait of Ben Theurich" },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -38,24 +40,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "Person",
     name: "Ben Theurich",
     url: SITE_URL,
-    sameAs: [
-      "https://github.com/BenTheurich",
-      "https://www.linkedin.com/in/ben-theurich/"
-    ],
+    sameAs: ["https://github.com/BenTheurich", "https://www.linkedin.com/in/ben-theurich/"],
     affiliation: { "@type": "CollegeOrUniversity", name: "Technical University of Munich" },
     address: { "@type": "PostalAddress", addressLocality: "Munich", addressCountry: "DE" },
-    jobTitle: "Software Engineer & M.Sc. Informatics student"
+    jobTitle: "Software Engineer & M.Sc. Informatics student",
   };
 
   return (
     <html lang="en" className="dark">
       <body>
         <LanguageProvider>
-          <a href="#home" className="skip-link">Skip to content</a>
+          <a href="#home" className="skip-link">
+            Skip to content
+          </a>
           <Nav />
           <main id="content">{children}</main>
           <Footer />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
         </LanguageProvider>
       </body>
     </html>

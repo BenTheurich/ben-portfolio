@@ -1,39 +1,23 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2022"
-    ],
+    "lib": ["dom", "dom.iterable", "es2022"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": [
-      "node",
-      "react",
-      "react-dom"
-    ],
+    "types": ["node", "react", "react-dom"],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/hooks/*": [
-        "hooks/*"
-      ]
+      "@/*": ["*"],
+      "@/styles/*": ["styles/*"],
+      "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"]
     },
     "incremental": true,
     "esModuleInterop": true,
@@ -47,9 +31,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
