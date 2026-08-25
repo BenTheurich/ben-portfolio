@@ -21,8 +21,8 @@
     "location": "Munich, Germany",
     "title": "Hi, I'm",
     "nameAccent": "Ben Theurich",
-    "subtitle": "Software Engineer & M.Sc. Informatics student at TUM.",
-    "description": "I build reliable, clean systems and explore practical ML / Computer Vision tooling.",
+    "subtitle": "Software & AI Engineer at Hefex Labs and M.Sc. Informatics student at TUM.",
+    "description": "I build practical software and computer-vision systems with as little unnecessary complexity as possible.",
     "downloadCV": "Download CV",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -30,12 +30,10 @@
   },
   "about": {
     "title": "About",
-    "p1": "I'm a software engineer from California, now based in Munich. I spent over two years at SPA in San Diego, where I built production-ready tools for defense clients and eventually stepped into a program lead role. That experience taught me how to take ownership, navigate complexity, and get things across the finish line without waiting to be asked.",
-    "p2": "Now I'm pursuing a Master's in Informatics at TUM, focusing on computer vision and machine learning. I chose TUM for the challenge—the program is tough, well-regarded, and full of opportunities to stretch myself. Munich also has a strong tech and startup scene, which is exactly what I was looking for.",
-    "p3": "I've been coding since I was a kid. What drew me in was how easy it was to get started. I didn't need fancy hardware, just a laptop and the will to build something, and I've always loved that kind of creative freedom. These days, I still enjoy building side projects, especially tools that solve niche problems or help communities run more smoothly.",
-    "p4": "I'm currently open to part-time / working-student roles in Munich. Something in computer vision or ML would be ideal, but I'm also open to full-stack roles where I can work with smart people and ship real things. I do well in agile, fast-moving teams, and I'm comfortable either leading or supporting as needed. I like to ask questions, push back when necessary, and stay flexible as ideas evolve.",
-    "p5": "One thing I try to live by: don't oversell, just deliver great work and let that speak for itself.",
-    "p6": "I'm bilingual in English and German, and always happy to connect. Shoot me a message on LinkedIn! :)"
+    "p1": "I'm a software engineer from California, now based in Munich. Before starting my Master's at TUM, I spent more than two years at Systems Planning and Analysis in San Diego. I developed Java-based analysis software and later led its user-driven roadmap and release process.",
+    "p2": "I recently completed my TUM Interdisciplinary Project with Hefex Labs, where I built computer-vision pipelines and integrated segmentation models into an applied system. I now continue that work part-time as a Software & AI Engineer while pursuing my M.Sc. in Informatics at TUM.",
+    "p3": "I've been coding since I was a kid, and I still build side projects whenever a problem catches my attention. I like systems that are easy to understand, hard to misuse, and no more complex than the job requires.",
+    "p4": "I work in English and German. The best way to reach me is on LinkedIn."
   },
   "projects": {
     "title": "Projects",
@@ -126,13 +124,22 @@
   "experience": {
     "title": "Experience",
     "roles": {
-      "hefex": {
-        "title": "Software Engineer, Computer Vision (TUM Interdisciplinary Project)",
+      "hefexPartTime": {
+        "title": "Software & AI Engineer (Part-time)",
         "company": "Hefex Labs",
-        "period": "Mar 2026 – Present",
+        "period": "Aug 2026 – Present",
         "location": "Munich",
         "bullets": [
-          "Developing segmentation models and integrating them into an applied computer-vision pipeline."
+          "Continue developing applied software and computer-vision systems after completing my TUM Interdisciplinary Project with Hefex Labs."
+        ]
+      },
+      "hefexIdp": {
+        "title": "Software Engineer (TUM Interdisciplinary Project)",
+        "company": "Hefex Labs",
+        "period": "Mar 2026 – Aug 2026",
+        "location": "Munich",
+        "bullets": [
+          "Built computer-vision pipelines and integrated segmentation models into an applied system for Hefex Labs."
         ]
       },
       "spaII": {
@@ -160,7 +167,7 @@
       "hmeContract": {
         "title": "Contract Software Engineer",
         "company": "HM Electronics (HME)",
-        "period": "Aug 2022 – Jun 2023",
+        "period": "Sep 2022 – Jun 2023",
         "location": "Carlsbad, CA",
         "bullets": [
           "Coordinated with multiple teams to establish a CI pipeline between dev builds and automated testing using Jenkins and Azure.",
@@ -180,8 +187,8 @@
         ]
       },
       "techForGood": {
-        "title": "Software Engineering Intern",
-        "company": "Tech For Good",
+        "title": "Software Engineer Intern",
+        "company": "Tech For Good Inc",
         "period": "Jun 2021 – Aug 2021",
         "location": "Boston, MA",
         "bullets": [
@@ -190,10 +197,10 @@
         ]
       },
       "desteam": {
-        "title": "Coding Instructor Intern",
-        "company": "Delaware Steam Academy",
-        "period": "Jun 2021 – Sep 2021",
-        "location": "Newark, DE",
+        "title": "Coding Instructor",
+        "company": "Delaware STEM Academy",
+        "period": "Jun 2021 – Aug 2021",
+        "location": "Remote",
         "bullets": [
           "Taught summer coding camps in JavaScript to middle school students.",
           "Fostered interest in coding and encouraged continued exploration."

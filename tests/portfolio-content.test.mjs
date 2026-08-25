@@ -3,7 +3,16 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const html = readFileSync(new URL("../out/index.html", import.meta.url), "utf8");
+const en = JSON.parse(readFileSync(new URL("../locales/en.json", import.meta.url), "utf8"));
 const de = JSON.parse(readFileSync(new URL("../locales/de.json", import.meta.url), "utf8"));
+
+test("the Hefex timeline separates the completed IDP from the part-time role", () => {
+  assert.equal(en.experience.roles.hefexIdp.period, "Mar 2026 – Aug 2026");
+  assert.equal(en.experience.roles.hefexPartTime.period, "Aug 2026 – Present");
+  assert.equal(de.experience.roles.hefexIdp.period, "März 2026 – August 2026");
+  assert.equal(de.experience.roles.hefexPartTime.period, "August 2026 – heute");
+  assert.match(html, /Software &amp; AI Engineer \(Part-time\)/);
+});
 
 test("EduComic is a featured project while its award remains visible", () => {
   assert.match(html, /aria-label="Open EduComic"/);

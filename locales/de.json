@@ -21,8 +21,8 @@
         "location": "München, Deutschland",
         "title": "Hi, ich bin",
         "nameAccent": "Ben Theurich",
-        "subtitle": "Softwareentwickler & M.Sc.-Student der Informatik an der TUM.",
-        "description": "Ich entwickle zuverlässige, saubere Systeme und arbeite an praxisnahen ML-/Computer-Vision-Tools.",
+        "subtitle": "Software & AI Engineer bei Hefex Labs und Informatik-Masterstudent an der TUM.",
+        "description": "Ich entwickle praxisnahe Software- und Computer-Vision-Systeme mit so wenig unnötiger Komplexität wie möglich.",
         "downloadCV": "Lebenslauf herunterladen",
         "linkedin": "LinkedIn",
         "github": "GitHub",
@@ -30,12 +30,10 @@
     },
     "about": {
         "title": "Über mich",
-        "p1": "Ich bin ein Software Engineer aus Kalifornien, jetzt in München ansässig. Über zwei Jahre war ich bei SPA in San Diego tätig, wo ich produktionsreife Tools für Verteidigungskunden entwickelt und schließlich eine Programmleitungsrolle übernommen habe. Diese Erfahrung lehrte mich, Verantwortung zu übernehmen, Komplexität zu bewältigen und Projekte proaktiv zum Abschluss zu bringen.",
-        "p2": "Derzeit absolviere ich meinen Master in Informatik an der TUM mit Schwerpunkt auf Computer Vision und maschinellem Lernen. Ich habe mich für die TUM entschieden, weil das Programm anspruchsvoll und renommiert ist und viele Möglichkeiten zur Weiterentwicklung bietet. München hat zudem eine starke Tech- und Startup-Szene – genau das, wonach ich gesucht habe.",
-        "p3": "Ich programmiere seit meiner Kindheit. Was mich daran faszinierte, war die niedrige Einstiegshürde: keine teure Hardware, nur ein Laptop und der Wille, etwas zu bauen – diese kreative Freiheit begeistert mich bis heute. Heute entwickle ich gerne Nebenprojekte, besonders Tools, die spezifische Probleme lösen oder Communities reibungsloser laufen lassen.",
-        "p4": "Aktuell suche ich nach einer Werkstudent:in-Rolle in München. Idealerweise im Bereich Computer Vision oder ML, aber ich bin auch offen für Full-Stack-Positionen, bei denen ich mit kompetenten Kolleg:innen zusammenarbeite und echte Produkte ausliefere. Ich arbeite gut in agilen, schnelllebigen Teams und fühle mich in führenden wie unterstützenden Rollen wohl. Ich stelle gerne Fragen, widerspreche konstruktiv, wenn nötig, und bleibe flexibel, wenn sich Ideen weiterentwickeln.",
-        "p5": "Ein Prinzip, nach dem ich lebe: nicht überverkaufen – gute Arbeit für sich sprechen lassen.",
-        "p6": "Ich bin zweisprachig in Englisch und Deutsch und freue mich über Kontakte. Schreib mir gern auf LinkedIn! :)"
+        "p1": "Ich bin Software Engineer aus Kalifornien und lebe heute in München. Vor meinem Masterstudium an der TUM war ich über zwei Jahre bei Systems Planning and Analysis in San Diego tätig. Dort entwickelte ich Java-basierte Analysesoftware und koordinierte später die nutzerorientierte Entwicklungs-Roadmap und den Release-Prozess.",
+        "p2": "Vor Kurzem habe ich mein Interdisziplinäres Projekt an der TUM bei Hefex Labs abgeschlossen. Dabei entwickelte ich Computer-Vision-Pipelines und integrierte Segmentierungsmodelle in ein Anwendungssystem. Diese Arbeit setze ich nun als Werkstudent und Software & AI Engineer fort, parallel zu meinem Informatik-Master an der TUM.",
+        "p3": "Ich programmiere seit meiner Kindheit und entwickle noch immer Nebenprojekte, sobald mich ein Problem nicht mehr loslässt. Am liebsten baue ich Systeme, die leicht zu verstehen, schwer falsch zu bedienen und nicht komplexer als nötig sind.",
+        "p4": "Ich arbeite auf Deutsch und Englisch. Am besten erreichst du mich über LinkedIn."
     },
     "projects": {
         "title": "Projekte",
@@ -126,13 +124,22 @@
     "experience": {
         "title": "Erfahrung",
         "roles": {
-            "hefex": {
-                "title": "Software Engineer, Computer Vision (TUM Interdisziplinäres Projekt)",
+            "hefexPartTime": {
+                "title": "Software & AI Engineer (Werkstudent)",
                 "company": "Hefex Labs",
-                "period": "März 2026 – heute",
+                "period": "August 2026 – heute",
                 "location": "München",
                 "bullets": [
-                    "Entwicklung von Segmentierungsmodellen und Integration in eine anwendungsorientierte Computer-Vision-Pipeline."
+                    "Setze nach Abschluss meines Interdisziplinären Projekts an der TUM die Entwicklung praxisnaher Software- und Computer-Vision-Systeme bei Hefex Labs fort."
+                ]
+            },
+            "hefexIdp": {
+                "title": "Software Engineer (TUM Interdisziplinäres Projekt)",
+                "company": "Hefex Labs",
+                "period": "März 2026 – August 2026",
+                "location": "München",
+                "bullets": [
+                    "Entwickelte Computer-Vision-Pipelines und integrierte Segmentierungsmodelle in ein Anwendungssystem für Hefex Labs."
                 ]
             },
             "spaII": {
@@ -160,7 +167,7 @@
             "hmeContract": {
                 "title": "Contract Software Engineer",
                 "company": "HM Electronics (HME)",
-                "period": "August 2022 – Juni 2023",
+                "period": "September 2022 – Juni 2023",
                 "location": "Carlsbad, CA",
                 "bullets": [
                     "Koordinierte mit mehreren Teams eine CI-Pipeline zwischen Entwicklungs-Builds und automatisierten Tests mit Jenkins und Azure.",
@@ -180,8 +187,8 @@
                 ]
             },
             "techForGood": {
-                "title": "Software Engineering Praktikant:in",
-                "company": "Tech For Good",
+                "title": "Software-Engineering-Praktikant",
+                "company": "Tech For Good Inc",
                 "period": "Juni 2021 – August 2021",
                 "location": "Boston, MA",
                 "bullets": [
@@ -190,10 +197,10 @@
                 ]
             },
             "desteam": {
-                "title": "Coding-Instructor (Praktikum)",
-                "company": "Delaware Steam Academy",
-                "period": "Juni 2021 – September 2021",
-                "location": "Newark, DE",
+                "title": "Coding Instructor",
+                "company": "Delaware STEM Academy",
+                "period": "Juni 2021 – August 2021",
+                "location": "Remote",
                 "bullets": [
                     "Unterrichtete JavaScript in Sommer-Coding-Camps für Mittelstufenschüler:innen.",
                     "Förderte Interesse am Programmieren und ermutigte zur weiteren Vertiefung."

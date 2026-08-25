@@ -71,7 +71,8 @@ const PROJECTS = [
 ];
 
 const EXPERIENCE_ROLES = [
-  { key: "hefex", href: "https://hefex-labs.com/" },
+  { key: "hefexPartTime", href: "https://hefex-labs.com/" },
+  { key: "hefexIdp", href: "https://hefex-labs.com/" },
   { key: "spaII", href: "https://www.spa.com/" },
   { key: "spaI", href: "https://www.spa.com/" },
   { key: "hmeContract", href: "https://www.hme.com/" },
@@ -190,12 +191,6 @@ export default function LocalizedHome() {
               </p>
               <p>
                 <RetypeText>{t("about.p4")}</RetypeText>
-              </p>
-              <p>
-                <RetypeText>{t("about.p5")}</RetypeText>
-              </p>
-              <p>
-                <RetypeText>{t("about.p6")}</RetypeText>
               </p>
             </div>
           </div>
