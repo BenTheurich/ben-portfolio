@@ -6,9 +6,8 @@ import { LanguageProvider } from "@/context/LanguageProvider";
 
 const SITE_URL = "https://bentheurich.com";
 
-const title = "Ben Theurich — Software Engineer & M.Sc. Informatics @ TUM";
-const description =
-  "Production Java systems, practical ML/CV tooling, and selected projects from a Munich-based TUM Informatics master's student.";
+const title = "Ben Theurich | Software engineer in Munich";
+const description = "Computer vision working student at Hefex Labs and Informatics student at TUM.";
 
 export const metadata: Metadata = {
   title,

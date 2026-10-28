@@ -21,7 +21,7 @@
     "location": "München, Deutschland",
     "title": "Hi, ich bin",
     "nameAccent": "Ben Theurich",
-    "subtitle": "Software & AI Engineer bei Hefex Labs und Informatik-Masterstudent an der TUM.",
+    "subtitle": "Software Engineer bei Hefex Labs und Informatik-Masterstudent an der TUM.",
     "description": "Ich entwickle praxisnahe Software- und Computer-Vision-Systeme mit so wenig unnötiger Komplexität wie möglich.",
     "downloadCV": "Lebenslauf herunterladen",
     "linkedin": "LinkedIn",
@@ -40,7 +40,7 @@
     "cards": {
       "rmfindr": {
         "title": "RmFindr",
-        "desc": "Indoor-Positioning-Prototyp, der WLAN-Signalfingerprints zur Live-Positionsschätzung nutzt. Überträgt gefilterte RSSI-Scans durch ein FastAPI-/WebSocket-Backend und einen KNN-Lokalisierer an eine React-Karte.",
+        "desc": "Ein Prototyp zur Ortung in Gebäuden, der deine Position anhand naher WLAN-Signale schätzt und auf einer Karte anzeigt.",
         "links": {
           "github": "GitHub",
           "productDemo": "Demo",
@@ -49,7 +49,7 @@
       },
       "timeSeriesAnnotator": {
         "title": "Zeitreihen-Annotator",
-        "desc": "Plattformübergreifendes Java-Desktop-Tool zur Visualisierung und Annotation multivariater Zeitreihen (CSV/HDF5) für Tandem Diabetes Care; unterstützt verknüpfte, größenverstellbare Diagramme (Linien-, Stufen- und Punktdiagramme), Zoom/Pan sowie Import/Export von Annotationen.",
+        "desc": "Eine Java-Desktop-App zum Betrachten und Annotieren von Zeitreihen, entwickelt für Tandem Diabetes Care. Unterstützt verknüpfte Diagramme und das Speichern von Annotationen.",
         "links": {
           "github": "GitHub",
           "tandem": "Tandem"
@@ -57,7 +57,7 @@
       },
       "eduComic": {
         "title": "EduComic",
-        "desc": "Hackathon-prämierter EdTech-Prototyp, der Unterrichtsmaterialien in quellengestützte Comics mit fiktiven Schüler-Avataren verwandelt. Entwickelt in einem fünfköpfigen Team beim 24-Stunden-Hackathon von START Munich.",
+        "desc": "Ein Prototyp, der Unterrichtsmaterialien in Comics verwandelt. Entwickelt von einem fünfköpfigen Team in 24 Stunden beim Hackathon von START Munich.",
         "links": {
           "liveDemo": "Live-Demo",
           "github": "GitHub",
@@ -66,15 +66,15 @@
       },
       "stocker": {
         "title": "Stocker",
-        "desc": "Webanwendung zur Aktienkursvorhersage mit AWS Forecast und Python + Flask sowie einem HTML/CSS/JS-Frontend; ausgezeichnet als „Most Complete Solution“ beim LPL Financial Hackathon 2023.",
+        "desc": "Eine Web-App zur Aktienkursvorhersage, ausgezeichnet als „Most Complete Solution“ beim LPL Financial Hackathon 2023.",
         "links": {
           "github": "GitHub",
           "hackathon": "Hackathon"
         }
       },
       "videoPlayer": {
-        "title": "Videoplayer",
-        "desc": "Leichtgewichtiger Java-Desktop-Videoplayer für „The Office“, der Episoden mit Beschreibungen katalogisiert, über VLCJ abspielt und die zuletzt gesehene Episode samt Position fortsetzt; Metadaten per Selenium-Scraper erfasst.",
+        "title": "The Office Player",
+        "desc": "Ein Desktop-Player für „The Office“, der sich Episode und Wiedergabeposition merkt.",
         "links": {
           "github": "GitHub",
           "demo": "Demo"
@@ -82,7 +82,7 @@
       },
       "embeddedSnake": {
         "title": "Embedded Snake Game",
-        "desc": "Snake-Spiel für STM32 von Grund auf: Joystick-Steuerung, 8×8-LED-Display und dezente Soundeffekte; schlanke Spielschleife mit verketteter Liste.",
+        "desc": "Snake auf einem STM32-Board mit Joystick-Steuerung, 8×8-LED-Display und Sound.",
         "links": {
           "github": "GitHub",
           "demo": "Demo"
@@ -202,8 +202,7 @@
         "period": "Juni 2021 – August 2021",
         "location": "Remote",
         "bullets": [
-          "Unterrichtete JavaScript in Sommer-Coding-Camps für Mittelstufenschüler:innen.",
-          "Förderte Interesse am Programmieren und ermutigte zur weiteren Vertiefung."
+          "Unterrichtete JavaScript in Sommer-Coding-Camps für Mittelstufenschüler:innen."
         ]
       }
     }
@@ -224,6 +223,6 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Ben Theurich — Erstellt mit Next.js + Tailwind."
+    "copyright": "© {year} Ben Theurich"
   }
 }

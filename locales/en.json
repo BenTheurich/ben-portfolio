@@ -21,7 +21,7 @@
     "location": "Munich, Germany",
     "title": "Hi, I'm",
     "nameAccent": "Ben Theurich",
-    "subtitle": "Software & AI Engineer at Hefex Labs and M.Sc. Informatics student at TUM.",
+    "subtitle": "Software Engineer at Hefex Labs and M.Sc. Informatics student at TUM.",
     "description": "I build practical software and computer-vision systems with as little unnecessary complexity as possible.",
     "downloadCV": "Download CV",
     "linkedin": "LinkedIn",
@@ -40,7 +40,7 @@
     "cards": {
       "rmfindr": {
         "title": "RmFindr",
-        "desc": "Indoor-positioning prototype that learns Wi-Fi signal fingerprints to estimate live location. Streams filtered RSSI scans through a FastAPI/WebSocket backend and KNN localizer to a React map.",
+        "desc": "An indoor positioning prototype that estimates your location from nearby Wi-Fi signals and shows it on a live map.",
         "links": {
           "github": "GitHub",
           "productDemo": "Demo",
@@ -49,7 +49,7 @@
       },
       "timeSeriesAnnotator": {
         "title": "Time Series Annotator",
-        "desc": "Cross-platform Java desktop tool to visualize and annotate multivariate time-series (CSV/HDF5) for Tandem Diabetes Care; supports linked, resizable charts (line/step/scatter), zoom/pan, and import/export of annotations.",
+        "desc": "A Java desktop app for viewing and annotating time-series data, built for Tandem Diabetes Care. Supports linked charts and saved annotations.",
         "links": {
           "github": "GitHub",
           "tandem": "Tandem"
@@ -57,7 +57,7 @@
       },
       "eduComic": {
         "title": "EduComic",
-        "desc": "Hackathon-winning classroom storytelling prototype that turns lesson materials into source-grounded comics starring fictional student avatars. Built by a five-person team during START Munich's 24-hour hackathon.",
+        "desc": "A classroom storytelling prototype that turns lesson materials into comics. Built by a five-person team in 24 hours at START Munich's hackathon.",
         "links": {
           "liveDemo": "Live Demo",
           "github": "GitHub",
@@ -66,15 +66,15 @@
       },
       "stocker": {
         "title": "Stocker",
-        "desc": "Stock predicting site using AWS Forecast, Python + Flask, with an HTML CSS JS frontend, winner of \"Most Complete Solution\" at LPL Financial's 2023 Hackathon.",
+        "desc": "A stock prediction web app that won \"Most Complete Solution\" at LPL Financial's 2023 hackathon.",
         "links": {
           "github": "GitHub",
           "hackathon": "Hackathon"
         }
       },
       "videoPlayer": {
-        "title": "Video Player",
-        "desc": "Lightweight Java desktop video player for The Office that catalogs episodes with descriptions, plays via VLCJ, and remembers your last-watched episode and timestamp; metadata was populated via a Selenium scraper.",
+        "title": "The Office player",
+        "desc": "A desktop player for The Office that remembers your episode and playback position.",
         "links": {
           "github": "GitHub",
           "demo": "Demo"
@@ -82,7 +82,7 @@
       },
       "embeddedSnake": {
         "title": "Embedded Snake Game",
-        "desc": "From-scratch Snake for STM32: joystick controls, 8×8 LED display, and lightweight sound, driven by a tight game loop and a linked-list snake.",
+        "desc": "Snake on an STM32 board with joystick controls, an 8×8 LED display, and sound.",
         "links": {
           "github": "GitHub",
           "demo": "Demo"
@@ -201,10 +201,7 @@
         "company": "Delaware STEM Academy",
         "period": "Jun 2021 – Aug 2021",
         "location": "Remote",
-        "bullets": [
-          "Taught summer coding camps in JavaScript to middle school students.",
-          "Fostered interest in coding and encouraged continued exploration."
-        ]
+        "bullets": ["Taught summer coding camps in JavaScript to middle school students."]
       }
     }
   },
@@ -224,6 +221,6 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Ben Theurich — Built with Next.js + Tailwind."
+    "copyright": "© {year} Ben Theurich"
   }
 }

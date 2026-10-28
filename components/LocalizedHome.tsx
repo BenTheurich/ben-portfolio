@@ -130,7 +130,7 @@ export default function LocalizedHome() {
                 <span className="text-navy dark:text-accent">
                   <RetypeText>{t("hero.nameAccent")}</RetypeText>
                 </span>
-                {" — "}
+                {". "}
                 <RetypeText>{t("hero.subtitle")}</RetypeText>
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-gray-700 dark:text-gray-300">
