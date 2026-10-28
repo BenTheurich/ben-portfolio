@@ -38,6 +38,23 @@
   "projects": {
     "title": "Projects",
     "cards": {
+      "careerCompass": {
+        "title": "Career Compass",
+        "desc": "Explore IT career options from a CV or a short profile, compare skill gaps, and plan what to learn next. Built as a semester team project.",
+        "links": {
+          "demoVideo": "Demo video",
+          "liveApp": "Live app",
+          "github": "GitHub"
+        }
+      },
+      "ledBoard": {
+        "title": "LedBoard",
+        "desc": "An LED display for my desk with a clock, live bus departures, weather, and pixel animations. Controlled through a browser, with custom messages and drawings.",
+        "links": {
+          "github": "GitHub",
+          "demoVideo": "Demo video"
+        }
+      },
       "rmfindr": {
         "title": "RmFindr",
         "desc": "An indoor positioning prototype that estimates your location from nearby Wi-Fi signals and shows it on a live map.",

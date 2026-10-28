@@ -38,6 +38,23 @@
   "projects": {
     "title": "Projekte",
     "cards": {
+      "careerCompass": {
+        "title": "Career Compass",
+        "desc": "Eine Web-App, die aus einem Lebenslauf oder Kurzprofil passende IT-Berufe, Kompetenzlücken und Lernpfade ableitet. Entstanden als Teamprojekt über ein Semester.",
+        "links": {
+          "demoVideo": "Demo-Video",
+          "liveApp": "Live-App",
+          "github": "GitHub"
+        }
+      },
+      "ledBoard": {
+        "title": "LedBoard",
+        "desc": "Ein LED-Display für meinen Schreibtisch mit Uhr, Live-Busabfahrten, Wetter und Pixelanimationen. Über eine Weboberfläche lassen sich die Modi wechseln sowie Nachrichten und Zeichnungen anzeigen.",
+        "links": {
+          "github": "GitHub",
+          "demoVideo": "Demo-Video"
+        }
+      },
       "rmfindr": {
         "title": "RmFindr",
         "desc": "Ein Prototyp zur Ortung in Gebäuden, der deine Position anhand naher WLAN-Signale schätzt und auf einer Karte anzeigt.",

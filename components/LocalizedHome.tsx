@@ -7,6 +7,32 @@ import RetypeText from "@/components/RetypeText";
 
 const PROJECTS = [
   {
+    key: "careerCompass",
+    cover: "/projects/career-compass-cover.svg",
+    tags: ["React", "TypeScript", "Python", "FastAPI", "OpenAI", "pgvector"],
+    links: [
+      {
+        key: "demoVideo",
+        href: "https://drive.google.com/file/d/16qwrOVrAmvkeYtaKjkzph2wcSOMEIQPm/view",
+      },
+      { key: "liveApp", href: "https://career-compass-hqrdul4iqa-ey.a.run.app/" },
+      { key: "github", href: "https://github.com/vanessafu/GenAI-Career-Compass" },
+    ],
+  },
+  {
+    key: "ledBoard",
+    cover: "/projects/ledboard-cover.webp",
+    coverPosition: "center bottom",
+    tags: ["Raspberry Pi Zero WH", "Python", "Flask", "MAX7219", "SPI"],
+    links: [
+      {
+        key: "demoVideo",
+        href: "https://photos.google.com/share/AF1QipNOc32biwCpALE7iZqi61sBdthm-AGxb90jAhmkWQjUXPC99zsiK7GEY5G4OjBObw/photo/AF1QipMrXEdKHhnZgmrI52Dlr05eTZkYTQFsSsEsmqUG?key=b09VeXFpTjVEZ0NWTUp1U2I2Nm5oc0VxUXlxMHpB",
+      },
+      { key: "github", href: "https://github.com/BenTheurich/LedBoard" },
+    ],
+  },
+  {
     key: "eduComic",
     cover: "/projects/educomic-cover.png",
     tags: ["FLUX.2", "OpenAI", "Image Generation", "LLMs", "EdTech"],
@@ -225,6 +251,7 @@ export default function LocalizedHome() {
                       src={p.cover}
                       alt={title + " cover"}
                       className="motion-card-image h-full w-full object-cover"
+                      style={p.coverPosition ? { objectPosition: p.coverPosition } : undefined}
                       loading="lazy"
                     />
                     <div className="project-tech-overlay">

@@ -29,6 +29,21 @@ test("the German project card has complete localized copy", () => {
   assert.equal(de.projects.cards.eduComic.links.pitchDeck, "Pitch-Deck");
 });
 
+test("LedBoard links to its demo video and GitHub", () => {
+  const card = [...html.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)]
+    .map(([markup]) => markup)
+    .find((markup) => markup.includes('aria-label="Open LedBoard"'));
+
+  assert.ok(card, "the LedBoard card is present");
+  assert.match(card, /src="\/projects\/ledboard-cover\.webp"/);
+  assert.match(card, /href="https:\/\/github.com\/BenTheurich\/LedBoard"/);
+  assert.match(card, /href="https:\/\/photos\.google\.com\/share\/[^\"]+\/photo\/[^\"]+\?key=/);
+  assert.doesNotMatch(card, /disabled=""/);
+  assert.doesNotMatch(card, /href="(?:#|undefined|)"/);
+  assert.equal(en.projects.cards.ledBoard.links.demoVideo, "Demo video");
+  assert.equal(de.projects.cards.ledBoard.links.demoVideo, "Demo-Video");
+});
+
 test("the Time Series Annotator card links to Tandem Diabetes Care", () => {
   assert.match(html, /href="https:\/\/www\.tandemdiabetes\.com\/"/);
 });
