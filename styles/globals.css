@@ -83,29 +83,21 @@ section[data-section]:first-of-type {
     scroll-behavior: auto !important;
   }
 
-  .retype-word {
+  .retype-character {
     animation: none !important;
-    clip-path: none !important;
   }
 }
 
-.retype-word {
-  display: inline-block;
-  animation: retype-word var(--retype-duration) steps(var(--retype-characters), start)
-    var(--retype-delay) backwards;
+.retype-character {
+  animation: retype-character 1ms step-start var(--retype-delay) backwards;
 }
 
-.underline .retype-word,
-.hover\:underline:hover .retype-word {
-  text-decoration-line: underline;
-}
-
-@keyframes retype-word {
+@keyframes retype-character {
   from {
-    clip-path: inset(0 100% 0 0);
+    opacity: 0;
   }
   to {
-    clip-path: inset(0);
+    opacity: 1;
   }
 }
 

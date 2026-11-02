@@ -25,33 +25,28 @@ export default function RetypeText({ children }: { children: string }) {
 
   if (!languageChangeId || !animate) return <span ref={ref}>{children}</span>;
 
-  const tokens = children.match(/\s+|\S+/gu) ?? [];
-  const characterCount = Math.max(Array.from(children).length, 1);
+  const characters = Array.from(children);
+  const characterCount = Math.max(characters.length, 1);
   const duration = Math.min(MAX_DURATION_MS, Math.max(MIN_DURATION_MS, characterCount * 10));
   const step = duration / characterCount;
-  let characterIndex = 0;
 
   return (
     <span ref={ref} className="retype-text">
-      {tokens.map((token, tokenIndex) => {
-        const characters = Array.from(token);
+      {characters.map((character, characterIndex) => {
+        if (/\s/u.test(character)) return character;
 
-        if (/^\s+$/u.test(token)) {
-          characterIndex += characters.length;
-          return token;
-        }
-
-        const delay = characterIndex * step;
-        characterIndex += characters.length;
+        // Inline characters preserve punctuation, hyphenation, and non-breaking spaces.
         const style = {
-          "--retype-delay": `${delay}ms`,
-          "--retype-duration": `${Math.max(characters.length * step, 40)}ms`,
-          "--retype-characters": characters.length,
+          "--retype-delay": `${characterIndex * step}ms`,
         } as CSSProperties;
 
         return (
-          <span key={`${languageChangeId}-${tokenIndex}`} className="retype-word" style={style}>
-            {token}
+          <span
+            key={`${languageChangeId}-${characterIndex}`}
+            className="retype-character"
+            style={style}
+          >
+            {character}
           </span>
         );
       })}
